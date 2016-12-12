@@ -3,7 +3,9 @@
 
 (menu-bar-mode -1)
 (setq auto-save-default nil)
+(setq make-backup-files nil)
 (fset 'yes-or-no-p 'y-or-n-p)
+;;; (setq default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (require 'linum)
 ;; (set-face-foreground 'linum "magenta")
