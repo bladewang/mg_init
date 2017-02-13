@@ -9,7 +9,7 @@
 (setq-default auto-save-default  nil
               make-backup-files  nil
               linum-format  "%4d "
-	      ediff-forward-word-function  'forward-char)
+              ediff-forward-word-function  'forward-char)
 
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
