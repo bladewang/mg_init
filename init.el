@@ -2,24 +2,21 @@
 ;;; add by wky
 
 (menu-bar-mode -1)
-(setq-default auto-save-default nil)
-(setq-default make-backup-files nil)
-(fset 'yes-or-no-p 'y-or-n-p)
-;;; (setq default-case-fold-search nil) ;;; :set ignorecase
-
-;; (require 'linum)
-;; (set-face-foreground 'linum "magenta")
-(setq-default linum-format "%4d ")
-
-;; set charactor level diff
-(setq-default ediff-forward-word-function 'forward-char)
-
 (global-hl-line-mode 1)
+
+(fset 'yes-or-no-p 'y-or-n-p)
+
+(setq-default auto-save-default  nil
+              make-backup-files  nil
+              linum-format  "%4d "
+	      ediff-forward-word-function  'forward-char)
+
+;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
+
 ;; (set-face-background 'hl-line "color-19")
 (set-face-background 'hl-line "blue")
 (set-face-foreground 'hl-line "white")
 
-;; (set-face-background 'region "magenta")
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
 (set-face-foreground 'region "white")
