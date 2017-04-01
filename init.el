@@ -14,8 +14,8 @@
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (set-face-background 'hl-line "color-19")
-(set-face-background 'hl-line "blue")
-(set-face-foreground 'hl-line "white")
+;; (set-face-background 'hl-line "blue")
+;; (set-face-foreground 'hl-line "white")
 
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
@@ -34,3 +34,5 @@
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
+
+(load-theme 'afternoon 't)
