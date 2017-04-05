@@ -35,4 +35,4 @@
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 
-(load-theme 'afternoon 't)
+(load-theme 'afternoon t)
