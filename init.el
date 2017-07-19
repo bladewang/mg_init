@@ -9,8 +9,8 @@
 (setq-default auto-save-default  nil
               make-backup-files  nil
               linum-format  "%4d "
-              ediff-forward-word-function  'forward-char)
-
+              ediff-forward-word-function  'forward-char
+              diff-switches "-u")
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (set-face-background 'hl-line "color-19")
@@ -34,3 +34,4 @@
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
+(put 'upcase-region 'disabled nil)
