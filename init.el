@@ -11,6 +11,7 @@
               linum-format  "%4d "
               ediff-forward-word-function  'forward-char
               diff-switches "-u")
+
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (set-face-background 'hl-line "color-19")
@@ -30,6 +31,7 @@
 (package-initialize)
 
 (window-numbering-mode)
+(global-undo-tree-mode)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
