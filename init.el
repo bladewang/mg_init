@@ -1,5 +1,6 @@
 
 ;;; add by wky
+;;; init file work with spacemac
 
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
