@@ -36,4 +36,6 @@
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 
+(setq term-buffer-maximum-size 0)
+
 (load-theme 'afternoon t)
