@@ -21,6 +21,7 @@
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
 (set-face-foreground 'region "white")
+(set-face-foreground 'minibuffer-prompt "white")
 
 ;;; config melpa
 (require 'package)
@@ -38,3 +39,17 @@
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 (setq term-buffer-maximum-size 0)
 (put 'upcase-region 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
