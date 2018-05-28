@@ -37,6 +37,8 @@
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
+(global-set-key (kbd "M-r") 'move-to-window-line-top-bottom)
+
 (setq term-buffer-maximum-size 0)
 (put 'upcase-region 'disabled nil)
 (custom-set-variables
