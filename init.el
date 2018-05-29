@@ -35,6 +35,7 @@
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
+(global-set-key (kbd "C-x C-q") 'read-only-mode)
 
 (setq term-buffer-maximum-size 0)
 
