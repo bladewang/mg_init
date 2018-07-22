@@ -17,7 +17,7 @@
 ;; (set-face-background 'hl-line "color-19")
 (set-face-background 'hl-line "black")
 (set-face-foreground 'hl-line "white")
-(set-face-foreground 'linum "magenta")
+(add-hook 'linum-mode-hook (lambda () (set-face-foreground 'linum "magenta")))
 
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
