@@ -15,8 +15,9 @@
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (set-face-background 'hl-line "color-19")
-(set-face-background 'hl-line "blue")
+(set-face-background 'hl-line "black")
 (set-face-foreground 'hl-line "white")
+(set-face-foreground 'linum "magenta")
 
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
@@ -49,10 +50,13 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
+    (markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
+(require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
+;; ## end of OPAM user-setup addition for emacs / base ## keep this line
