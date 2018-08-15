@@ -16,7 +16,7 @@
 
 ;; (set-face-background 'hl-line "color-19")
 (set-face-background 'hl-line "black")
-(set-face-foreground 'hl-line "white")
+;; (set-face-foreground 'hl-line "white")
 (add-hook 'linum-mode-hook (lambda () (set-face-foreground 'linum "magenta")))
 
 ;; (set-face-background 'region "color-160")
@@ -48,6 +48,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
  '(package-selected-packages
    (quote
     (markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
