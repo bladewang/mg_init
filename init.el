@@ -35,6 +35,11 @@
 (window-numbering-mode)
 (global-undo-tree-mode)
 
+(require 'pyim)
+(require 'pyim-basedict) ; 拼音词库设置，五笔用户 *不需要* 此行设置
+(pyim-basedict-enable)   ; 拼音词库，五笔用户 *不需要* 此行设置
+(setq default-input-method "pyim")
+
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
@@ -53,13 +58,14 @@
     ("28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
  '(package-selected-packages
    (quote
-    (markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
+    (evil pyim markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(magit-diff-added-highlight ((t (:background "black" :foreground "green"))))
+ '(magit-diff-removed-highlight ((t (:background "black" :foreground "red")))))
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
