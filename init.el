@@ -31,6 +31,7 @@
 (package-initialize)
 
 (window-numbering-mode)
+(setq markdown-command "pandoc")
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
