@@ -62,12 +62,12 @@
    (vector "#eaeaea" "#d54e53" "DarkOliveGreen3" "#e7c547" "DeepSkyBlue1" "#c397d8" "#70c0b1" "#181a26"))
  '(custom-safe-themes
    (quote
-    ("2540689fd0bc5d74c4682764ff6c94057ba8061a98be5dd21116bf7bf301acfb" "28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "2540689fd0bc5d74c4682764ff6c94057ba8061a98be5dd21116bf7bf301acfb" "28ec8ccf6190f6a73812df9bc91df54ce1d6132f18b4c8fcc85d45298569eb53" default)))
  '(fci-rule-color "#14151E")
  '(focus-follows-mouse nil)
  '(package-selected-packages
    (quote
-    (evil pyim markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme)))
+    (zenburn-theme smex spacemacs-theme evil pyim markdown-mode window-numbering web-server w3m undo-tree sicp magit afternoon-theme)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
