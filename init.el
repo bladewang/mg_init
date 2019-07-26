@@ -22,6 +22,11 @@
 (set-face-background 'region "red")
 (set-face-foreground 'region "white")
 
+;; config elpy
+(setq elpy-rpc-python-command  "python3"
+      python-shell-interpreter "ipython3"
+      python-shell-interpreter-args " --simple-prompt --pprint")
+
 ;;; config melpa
 (require 'package)
 (add-to-list
