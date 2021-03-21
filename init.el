@@ -4,6 +4,7 @@
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
 
+
 (server-start) ;; for emacsclient
 ;;  alias em='emacsclient -t -a "emacs -nw -Q -l ~/my-repo/mg_init/init.el"'
 
@@ -21,6 +22,8 @@
 (set-face-background 'hl-line "color-17")
 (set-face-foreground 'hl-line "white")
 
+(set-face-foreground 'minibuffer-prompt "magenta")
+
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
 (set-face-foreground 'region "white")
@@ -35,6 +38,7 @@
 
 (window-numbering-mode)
 (global-undo-tree-mode)
+(ivy-mode)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
