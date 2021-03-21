@@ -4,6 +4,9 @@
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
 
+(server-start) ;; for emacsclient
+;;  alias em='emacsclient -t -a "emacs -nw -Q -l ~/my-repo/mg_init/init.el"'
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq-default auto-save-default  nil
@@ -15,7 +18,7 @@
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;; (set-face-background 'hl-line "color-19")
-(set-face-background 'hl-line "blue")
+(set-face-background 'hl-line "color-17")
 (set-face-foreground 'hl-line "white")
 
 ;; (set-face-background 'region "color-160")
