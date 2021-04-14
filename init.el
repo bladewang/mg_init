@@ -39,6 +39,7 @@
 (window-numbering-mode)
 (global-undo-tree-mode)
 (ivy-mode)
+(elpy-enable)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
