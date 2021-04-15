@@ -28,6 +28,7 @@
 (set-face-background 'region "red")
 (set-face-foreground 'region "white")
 
+
 ;;; config melpa
 (require 'package)
 (add-to-list
@@ -36,10 +37,12 @@
  t)
 (package-initialize)
 
+(elpy-enable)
 (window-numbering-mode)
 (global-undo-tree-mode)
 (ivy-mode)
-(elpy-enable)
+(set-face-background 'ivy-minibuffer-match-face-1 "black")
+(counsel-mode)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
