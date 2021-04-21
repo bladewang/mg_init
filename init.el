@@ -38,11 +38,18 @@
 (package-initialize)
 
 (elpy-enable)
-(window-numbering-mode)
+; (window-numbering-mode)
 (global-undo-tree-mode)
+
+;;; conf ivy
 (ivy-mode)
 (set-face-background 'ivy-minibuffer-match-face-1 "black")
 (counsel-mode)
+
+(global-set-key (kbd "C-c SPC") 'ivy-restrict-to-matches)
+;;; conf ace-window
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-dispatch-always t)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
