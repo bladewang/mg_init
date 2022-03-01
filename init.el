@@ -30,8 +30,9 @@
  t)
 (package-initialize)
 
-;(window-numbering-mode)
-;(global-undo-tree-mode)
+
+(global-undo-tree-mode)
+(global-set-key (kbd "M-o") 'ace-window)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
