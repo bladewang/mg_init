@@ -30,8 +30,8 @@
  t)
 (package-initialize)
 
-(window-numbering-mode)
-(global-undo-tree-mode)
+;(window-numbering-mode)
+;(global-undo-tree-mode)
 
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
