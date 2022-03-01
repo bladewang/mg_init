@@ -36,9 +36,10 @@
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 (put 'upcase-region 'disabled nil)
 
-;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel
+;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel, elpy
 (global-undo-tree-mode)
 (global-set-key (kbd "M-o") 'ace-window)
 (ivy-mode)
-
+(setq python-shell-interpreter "python3")
+;; when editing .py file (elpy-enalbe)
 (load-theme 'afternoon 1)
