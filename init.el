@@ -31,10 +31,14 @@
 (package-initialize)
 
 
-(global-undo-tree-mode)
-(global-set-key (kbd "M-o") 'ace-window)
-
 ;;; keys binding
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 (put 'upcase-region 'disabled nil)
+
+;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel
+(global-undo-tree-mode)
+(global-set-key (kbd "M-o") 'ace-window)
+(ivy-mode)
+
+(load-theme 'afternoon)
