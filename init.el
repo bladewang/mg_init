@@ -41,4 +41,4 @@
 (global-set-key (kbd "M-o") 'ace-window)
 (ivy-mode)
 
-(load-theme 'afternoon)
+(load-theme 'afternoon 1)
