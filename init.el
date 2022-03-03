@@ -43,8 +43,7 @@
 (require 'dired )
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
 (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
-
-(require 'view-mode )
+(require 'view)
 (define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
 
 ;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel, elpy
