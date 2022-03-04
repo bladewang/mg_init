@@ -37,7 +37,10 @@
  t)
 (package-initialize)
 
+;;; conf elpy
+(setq python-shell-interpreter "python3")
 (elpy-enable)
+
 ; (window-numbering-mode)
 (global-undo-tree-mode)
 
@@ -55,3 +58,10 @@
 ; (global-set-key (kbd "C-SPC") nil)
 ; (global-set-key (kbd "C-@") 'set-mark-command)
 (put 'upcase-region 'disabled nil)
+
+;; learned from xahlee
+(require 'dired )
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
+(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
+(require 'view)
+(define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
