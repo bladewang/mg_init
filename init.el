@@ -1,7 +1,7 @@
 
 ;;; add by wky
 
-(menu-bar-mode -1)
+(menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
 (global-hl-line-mode 1)
 
 (fset 'yes-or-no-p 'y-or-n-p)
