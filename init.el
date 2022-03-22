@@ -34,6 +34,7 @@
 ;  ace-window                Quickly switch windows.
 ;  afternoon-theme           Dark color theme with a deep blue background
 ;  ag                        A front-end for ag ('the silver searcher'), the C ack replacement.
+;  wgrep-ag
 ;  counsel                   Various completion functions using Ivy
 ;  dired-single              Reuse the current dired buffer to visit a directory
 ;  elpy                      Emacs Python Development Environment
