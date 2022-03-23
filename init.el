@@ -10,6 +10,7 @@
               make-backup-files  nil
               linum-format  "%4d "
               ediff-forward-word-function  'forward-char
+	      undo-tree-auto-save-history  nil
               diff-switches "-u")
 
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
