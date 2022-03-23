@@ -2,7 +2,7 @@
 ;;; add by wky
 
 (menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
-;(global-hl-line-mode 1)
+
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -14,9 +14,10 @@
 
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
+;(global-hl-line-mode 1)
 ;; (set-face-background 'hl-line "color-19")
-(set-face-background 'hl-line "blue")
-(set-face-foreground 'hl-line "white")
+;(set-face-background 'hl-line "blue")
+;(set-face-foreground 'hl-line "white")
 
 ;; (set-face-background 'region "color-160")
 (set-face-background 'region "red")
