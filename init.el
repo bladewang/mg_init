@@ -37,6 +37,11 @@
   :config
   (global-undo-tree-mode))
 
+(use-package ace-window
+  :ensure t
+  :bind
+  ("M-o" . 'ace-window))
+
 (defvar my/packages
   '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
     ;ace-window            ;Quickly switch windows.
@@ -73,7 +78,7 @@
 (define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
 
 ;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel, elpy
-(global-set-key (kbd "M-o") 'ace-window)
+
 
 (setq python-shell-interpreter "python3")
 ;; when editing .py file (elpy-enalbe)
