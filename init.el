@@ -26,14 +26,16 @@
 
 
 (use-package counsel
-  :ensure
-  :commands counsel-mode)
+  :ensure t
+  :config
+  (counsel-mode))
 
 (use-package undo-tree
-  :ensure
+  :ensure t
   :init
   (setq undo-tree-auto-save-history  nil)
-  :commands global-undo-tree-mode)
+  :config
+  (global-undo-tree-mode))
 
 (defvar my/packages
   '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
