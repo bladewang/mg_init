@@ -28,6 +28,8 @@
   :ensure t
   :config
   (counsel-mode)
+  (setq ivy-use-virtual-buffers t)
+  (setq enable-recursive-minibuffers t)
   :bind
   ("C-M-s" . 'swiper-isearch))
 
@@ -42,6 +44,11 @@
   :ensure t
   :bind
   ("M-o" . 'ace-window))
+
+(use-package view
+  :bind
+  (:map view-mode-map
+   ("e" . 'View-scroll-line-forward)))
 
 (defvar my/packages
   '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
@@ -74,12 +81,6 @@
 (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
 (define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
 ;; press "o" to open file in another window
-
-(require 'view)
-(define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
-
-;;; use below codes after package-install undoo-tree, ace-window, ivy, counsel, elpy
-
 
 (setq python-shell-interpreter "python3")
 ;; when editing .py file (elpy-enalbe)
