@@ -90,6 +90,10 @@
     ))
 
 
+(dolist (pkg my/packages)
+  (when (not (package-installed-p pkg))
+    (package-install pkg)))
+
 ;;; for emacsclient
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
 (server-start)
