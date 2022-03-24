@@ -27,16 +27,16 @@
 (use-package counsel
   :ensure t
   :config
-  (counsel-mode))
+  (counsel-mode)
+  :bind
+  ("C-M-s" . 'swiper-isearch))
 
 (use-package undo-tree
   :ensure t
   :init
   (setq undo-tree-auto-save-history  nil)
   :config
-  (global-undo-tree-mode)
-  :bind
-  ("C-M-s" . 'swiper-isearch))
+  (global-undo-tree-mode))
 
 (use-package ace-window
   :ensure t
