@@ -16,12 +16,16 @@
 
 ;;; config melpa
 (require 'package)
-(setq package-archives
-  '(("melpa"    . "http://melpa.org/packages/")))
+(add-to-list
+  'package-archives
+  '("melpa"    . "http://melpa.org/packages/")
+  t)
 ;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
 (package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
 (when (not (package-installed-p 'use-package))
   (package-install 'use-package))
@@ -38,7 +42,7 @@
 (use-package undo-tree
   :ensure t
   :init
-  (setq undo-tree-auto-save-history  nil)
+  (setq undo-tree-auto-save-history nil)
   :config
   (global-undo-tree-mode))
 
