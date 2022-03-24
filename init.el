@@ -1,10 +1,8 @@
 
-
-;;; add by wky
+(setq gc-cons-threshold (* 50 1000 1000)) 
 
 (menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
 (fset 'yes-or-no-p 'y-or-n-p)
-
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
@@ -34,6 +32,7 @@
   :ensure t
   :config
   (counsel-mode)
+  (ivy-mode)
   (setq ivy-use-virtual-buffers t)
   (setq enable-recursive-minibuffers t)
   :bind
@@ -63,7 +62,7 @@
   (:map view-mode-map
    ("e" . 'View-scroll-line-forward)))
 
-;; learned from xahlee ;; or just (require 'dired-single)
+;; learned from xahlee ;; or just (require 'dired-single) than M-x dired-single-magic-buffer
 ;; press "o" to open file in another window
 ;(require 'dired )
 ;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
@@ -106,5 +105,7 @@
 
 (load-theme 'afternoon 1)
 
+
+(setq gc-cons-threshold (* 2 1000 1000))
 
 
