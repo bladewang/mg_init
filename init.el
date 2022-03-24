@@ -1,8 +1,10 @@
 
+
 ;;; add by wky
 
 (menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
 (fset 'yes-or-no-p 'y-or-n-p)
+
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
@@ -45,10 +47,27 @@
   :bind
   ("M-o" . 'ace-window))
 
+(use-package elpy
+  ;; to activate, M-: (elpy-enable)
+  :ensure t
+  :commands elpy-enable
+  :init
+  (setq python-shell-interpreter "python3"))
+
 (use-package view
   :bind
   (:map view-mode-map
    ("e" . 'View-scroll-line-forward)))
+
+;; learned from xahlee ;; or just (require 'dired-single)
+;; press "o" to open file in another window
+;(require 'dired )
+;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
+;(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
+(use-package dired
+  :bind (:map dired-mode-map
+	      ("RET" . 'dired-find-alternate-file)
+	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
 
 (defvar my/packages
   '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
@@ -70,18 +89,14 @@
     qrencode              ;QRCode encoder
     ))
 
+
 ;;; for emacsclient
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
 (server-start)
 
 (put 'upcase-region 'disabled nil)
 
-;; learned from xahlee ;; or just (require 'dired-single)
-(require 'dired )
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
-(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
-;; press "o" to open file in another window
-
-(setq python-shell-interpreter "python3")
-;; when editing .py file (elpy-enalbe)
 (load-theme 'afternoon 1)
+
+
+
