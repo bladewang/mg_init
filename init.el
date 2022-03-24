@@ -24,7 +24,6 @@
 (when (not (package-installed-p 'use-package))
   (package-install 'use-package))
 
-
 (use-package counsel
   :ensure t
   :config
@@ -35,7 +34,9 @@
   :init
   (setq undo-tree-auto-save-history  nil)
   :config
-  (global-undo-tree-mode))
+  (global-undo-tree-mode)
+  :bind
+  ("C-M-s" . 'swiper-isearch))
 
 (use-package ace-window
   :ensure t
