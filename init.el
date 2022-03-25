@@ -80,13 +80,16 @@
     ;ace-window            ;Quickly switch windows.
     ;undo-tree             ;Treat undo history as a tree
     wgrep-ag              ;Writable ag buffer and apply the changes to files
+    zoom                  ;Fixed and automatic balanced window layout
+    pyim                  ;A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime.
+    pyim-basedict         ;The default pinyin dict of pyim
     dired-single          ;Reuse the current dired buffer to visit a directory
     evil                  ;Extensible Vi layer for Emacs.
     afternoon-theme       ;Dark color theme with a deep blue background
     monokai-theme         ;A fruity color theme for Emacs.
+    darktooth-theme       ; the darkness... it watches
     gruvbox-theme         ;retro-groove colour theme for Emacs
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
-    darktooth-theme       ; the darkness... it watches
     ample-theme           ;Dark Theme for Emacs
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
@@ -110,7 +113,7 @@
 
 (put 'upcase-region 'disabled nil)
 
-(load-theme 'afternoon 1)
+(load-theme 'darktooth 1)
 
 
 (setq gc-cons-threshold (* 2 1000 1000))
