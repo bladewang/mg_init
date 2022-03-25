@@ -4,6 +4,7 @@
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 (fset 'yes-or-no-p 'y-or-n-p)
+(column-number-mode t)
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
@@ -34,8 +35,10 @@
   :config
   (counsel-mode)
   (ivy-mode)
-  (setq ivy-use-virtual-buffers t)
-  (setq enable-recursive-minibuffers t)
+  (setq ivy-use-virtual-buffers        t
+	ivy-count-format      "(%d/%d) "
+	enable-recursive-minibuffers   t
+	minibuffer-depth-indicate-mode t)
   :bind
   ("C-M-s" . 'swiper-isearch))
 
