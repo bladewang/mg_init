@@ -2,7 +2,7 @@
 (setq gc-cons-threshold (* 50 1000 1000)) 
 
 (setq inhibit-startup-screen t)
-(menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
+(menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq-default auto-save-default  nil
