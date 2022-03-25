@@ -84,6 +84,10 @@
     evil                  ;Extensible Vi layer for Emacs.
     afternoon-theme       ;Dark color theme with a deep blue background
     monokai-theme         ;A fruity color theme for Emacs.
+    gruvbox-theme         ;retro-groove colour theme for Emacs
+    moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
+    darktooth-theme       ; the darkness... it watches
+    ample-theme           ;Dark Theme for Emacs
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
