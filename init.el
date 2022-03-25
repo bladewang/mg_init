@@ -24,6 +24,11 @@
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
 (package-initialize)
+
+;(require 'benchmark-init)
+;; To disable collection of benchmark data after init is done.
+;(add-hook 'after-init-hook 'benchmark-init/deactivate)
+
 (when (not package-archive-contents)
   (package-refresh-contents))
 
@@ -32,8 +37,8 @@
 
 (use-package counsel
   :ensure t
+  :commands counsel-mode
   :config
-  (counsel-mode)
   (ivy-mode)
   (setq ivy-use-virtual-buffers        t
 	ivy-count-format      "(%d/%d) "
@@ -44,13 +49,18 @@
 
 (use-package undo-tree
   :ensure t
+  :defer t
   :init
   (setq undo-tree-auto-save-history nil)
+  :commands undo-tree-visualize
   :config
-  (global-undo-tree-mode))
+  (global-undo-tree-mode)
+  :bind
+  ("C-x u" . undo-tree-visualize))
 
 (use-package ace-window
   :ensure t
+  :defer t
   :bind
   ("M-o" . 'ace-window))
 
@@ -62,6 +72,7 @@
   (setq python-shell-interpreter "python3"))
 
 (use-package view
+  :defer t
   :bind
   (:map view-mode-map
    ("e" . 'View-scroll-line-forward)))
@@ -72,6 +83,7 @@
 ;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
 ;(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
 (use-package dired
+  :defer t
   :config
   (put 'dired-find-alternate-file 'disabled nil)
   :bind (:map dired-mode-map
