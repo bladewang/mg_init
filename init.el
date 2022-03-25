@@ -91,6 +91,7 @@
     gruvbox-theme         ;retro-groove colour theme for Emacs
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
     ample-theme           ;Dark Theme for Emacs
+    cyberpunk-theme       ;Cyberpunk Color Theme
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
