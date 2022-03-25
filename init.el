@@ -1,6 +1,7 @@
 
 (setq gc-cons-threshold (* 50 1000 1000)) 
 
+(setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; M-x tmm-menubar ; to visit menu options
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -68,6 +69,8 @@
 ;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
 ;(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
 (use-package dired
+  :config
+  (put 'dired-find-alternate-file 'disabled nil)
   :bind (:map dired-mode-map
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
