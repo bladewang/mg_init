@@ -97,6 +97,7 @@
     pyim-basedict         ;The default pinyin dict of pyim
     dired-single          ;Reuse the current dired buffer to visit a directory
     evil                  ;Extensible Vi layer for Emacs.
+    benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
     monokai-theme         ;A fruity color theme for Emacs.
     darktooth-theme       ; the darkness... it watches
