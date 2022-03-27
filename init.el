@@ -1,10 +1,11 @@
 
-(setq gc-cons-threshold (* 50 1000 1000)) 
+(setq gc-cons-threshold (* 50 1000 1000))
 
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
+(put 'upcase-region 'disabled nil)
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
@@ -125,11 +126,8 @@
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
 (server-start)
 
-(put 'upcase-region 'disabled nil)
 
 (load-theme 'darktooth 1)
 
-
 (setq gc-cons-threshold (* 2 1000 1000))
-
 
