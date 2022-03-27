@@ -1,14 +1,10 @@
 
-;;; add by wky
+(setq gc-cons-threshold (* 50 1000 1000)) 
 
-(menu-bar-mode -1)
-(global-hl-line-mode 1)
-
-
-(server-start) ;; for emacsclient
-;;  alias em='emacsclient -t -a "emacs -nw -Q -l ~/my-repo/mg_init/init.el"'
-
+(setq inhibit-startup-screen t)
+(menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 (fset 'yes-or-no-p 'y-or-n-p)
+(column-number-mode t)
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
@@ -18,53 +14,122 @@
 
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
-;; (set-face-background 'hl-line "color-19")
-(set-face-background 'hl-line "color-17")
-(set-face-foreground 'hl-line "white")
-
-(set-face-foreground 'minibuffer-prompt "magenta")
-
-;; (set-face-background 'region "color-160")
-(set-face-background 'region "red")
-(set-face-foreground 'region "white")
-
-
 ;;; config melpa
 (require 'package)
 (add-to-list
- 'package-archives
- '("melpa" . "https://melpa.org/packages/")
- t)
+  'package-archives
+  '("melpa"    . "http://melpa.org/packages/")
+  t)
+;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+
 (package-initialize)
 
-;;; conf elpy
-(setq python-shell-interpreter "python3")
-(elpy-enable)
+;(require 'benchmark-init)
+;; To disable collection of benchmark data after init is done.
+;(add-hook 'after-init-hook 'benchmark-init/deactivate)
 
-; (window-numbering-mode)
-(global-undo-tree-mode)
+(when (not package-archive-contents)
+  (package-refresh-contents))
 
-;;; conf ivy
-(ivy-mode)
-(set-face-background 'ivy-minibuffer-match-face-1 "black")
-(counsel-mode)
+(when (not (package-installed-p 'use-package))
+  (package-install 'use-package))
 
-(global-set-key (kbd "C-c SPC") 'ivy-restrict-to-matches)
-;;; conf ace-window
-(global-set-key (kbd "M-o") 'ace-window)
-;(setq aw-dispatch-always t)
+(use-package counsel
+  :ensure t
+  :commands counsel-mode
+  :config
+  (ivy-mode)
+  (setq ivy-use-virtual-buffers        t
+	ivy-count-format      "(%d/%d) "
+	enable-recursive-minibuffers   t
+	minibuffer-depth-indicate-mode t)
+  :bind
+  ("C-M-s" . 'swiper-isearch))
 
-;;; keys binding
-; (global-set-key (kbd "C-SPC") nil)
-; (global-set-key (kbd "C-@") 'set-mark-command)
+(use-package undo-tree
+  :ensure t
+  :defer t
+  :init
+  (setq undo-tree-auto-save-history nil)
+  :commands undo-tree-visualize
+  :config
+  (global-undo-tree-mode)
+  :bind
+  ("C-x u" . undo-tree-visualize))
+
+(use-package ace-window
+  :ensure t
+  :defer t
+  :bind
+  ("M-o" . 'ace-window))
+
+(use-package elpy
+  ;; to activate, M-: (elpy-enable)
+  :ensure t
+  :commands elpy-enable
+  :init
+  (setq python-shell-interpreter "python3"))
+
+(use-package view
+  :defer t
+  :bind
+  (:map view-mode-map
+   ("e" . 'View-scroll-line-forward)))
+
+;; learned from xahlee ;; or just (require 'dired-single) than M-x dired-single-magic-buffer
+;; press "o" to open file in another window
+(use-package dired
+  :defer t
+  :config
+  (put 'dired-find-alternate-file 'disabled nil)
+  :bind (:map dired-mode-map
+	      ("RET" . 'dired-find-alternate-file)
+	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
+
+(defvar my/packages
+  '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
+    ;ace-window            ;Quickly switch windows.
+    ;undo-tree             ;Treat undo history as a tree
+    wgrep-ag              ;Writable ag buffer and apply the changes to files
+    zoom                  ;Fixed and automatic balanced window layout
+    pyim                  ;A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime.
+    pyim-basedict         ;The default pinyin dict of pyim
+    dired-single          ;Reuse the current dired buffer to visit a directory
+    evil                  ;Extensible Vi layer for Emacs.
+    benchmark-init        ;Benchmarks Emacs require and load calls
+    afternoon-theme       ;Dark color theme with a deep blue background
+    monokai-theme         ;A fruity color theme for Emacs.
+    darktooth-theme       ; the darkness... it watches
+    gruvbox-theme         ;retro-groove colour theme for Emacs
+    moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
+    ample-theme           ;Dark Theme for Emacs
+    cyberpunk-theme       ;Cyberpunk Color Theme
+    ;use-package           ;A configuration macro for simplifying your .emacs
+    ;counsel               ;Various completion functions using Ivy
+    magit                 ;A Git porcelain inside Emacs.
+    sicp                  ;Structure and Interpretation of Computer Programs in info format
+    ;elpy                  ;Emacs Python Development Environment
+    j-mode                ;Major mode for editing J programs
+    vlf                   ;View Large Files
+    w3m                   ;an Emacs interface to w3m
+    qrencode              ;QRCode encoder
+    ))
+
+
+(dolist (pkg my/packages)
+  (when (not (package-installed-p pkg))
+    (package-install pkg)))
+
+;;; for emacsclient
+;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
+(server-start)
+
 (put 'upcase-region 'disabled nil)
 
-;; learned from xahlee
-(require 'dired )
-(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
-(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
-(require 'view)
-(define-key view-mode-map (kbd "e") 'View-scroll-line-forward)
+(load-theme 'darktooth 1)
 
-;; set theme
-(load-theme 'afternoon t)
+
+(setq gc-cons-threshold (* 2 1000 1000))
+
+
