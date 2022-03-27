@@ -79,9 +79,6 @@
 
 ;; learned from xahlee ;; or just (require 'dired-single) than M-x dired-single-magic-buffer
 ;; press "o" to open file in another window
-;(require 'dired )
-;(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file) ; was dired-advertised-find-file
-;(define-key dired-mode-map (kbd "^") (lambda () (interactive) (find-alternate-file ".."))) ; was dired-up-directory
 (use-package dired
   :defer t
   :config
