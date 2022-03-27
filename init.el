@@ -38,8 +38,8 @@
 
 (use-package counsel
   :ensure t
-  :commands counsel-mode
   :config
+  (counsel-mode)
   (ivy-mode)
   (setq ivy-use-virtual-buffers        t
 	ivy-count-format      "(%d/%d) "
