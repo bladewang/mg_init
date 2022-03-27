@@ -3,9 +3,13 @@
 
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
+(tool-bar-mode -1)
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
 (put 'upcase-region 'disabled nil)
+
+(defvar default-font "Iosevka Term-16.0:weight=light")
+(add-to-list 'default-frame-alist `(font . ,default-font))
 
 (setq-default auto-save-default  nil
               make-backup-files  nil
