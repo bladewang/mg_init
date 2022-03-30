@@ -93,6 +93,7 @@
     ;undo-tree             ;Treat undo history as a tree
     wgrep-ag              ;Writable ag buffer and apply the changes to files
     zoom                  ;Fixed and automatic balanced window layout
+    counsel-tramp         ;Tramp ivy interface for ssh, docker, vagrant
     pyim                  ;A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime.
     pyim-basedict         ;The default pinyin dict of pyim
     dired-single          ;Reuse the current dired buffer to visit a directory
