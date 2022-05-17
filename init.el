@@ -110,6 +110,8 @@
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
     ample-theme           ;Dark Theme for Emacs
     cyberpunk-theme       ;Cyberpunk Color Theme
+    modus-themes          ;Elegant, highly legible and customizable themes
+    challenger-deep-theme ;challenger-deep Theme
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
