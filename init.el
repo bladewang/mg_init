@@ -114,6 +114,7 @@
     challenger-deep-theme ;challenger-deep Theme
     almost-mono-themes    ;Almost monochromatic color themes
     creamsody-theme       ;Straight from the soda fountain.
+    simplicity-theme      ;A minimalist dark theme
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
