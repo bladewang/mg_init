@@ -118,7 +118,6 @@
     molokai-theme         ;molokai theme with Emacs theme engine
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
     monokai-pro-theme     ;A simple theme based on the Monokai Pro Sublime color schemes
-    srcery-theme          ;Dark color theme
     nimbus-theme          ;An awesome dark theme
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
