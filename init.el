@@ -112,7 +112,6 @@
     ample-theme           ;Dark Theme for Emacs
     cyberpunk-theme       ;Cyberpunk Color Theme
     modus-themes          ;Elegant, highly legible and customizable themes
-    challenger-deep-theme ;challenger-deep Theme
     almost-mono-themes    ;Almost monochromatic color themes
     creamsody-theme       ;Straight from the soda fountain.
     simplicity-theme      ;A minimalist dark theme
