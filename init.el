@@ -117,7 +117,7 @@
     simplicity-theme      ;A minimalist dark theme
     molokai-theme         ;molokai theme with Emacs theme engine
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
-    monokai-pro-theme     ;A simple theme based on the Monokai Pro Sublime color schemes
+    ;monokai-pro-theme     ;A simple theme based on the Monokai Pro Sublime color schemes
     nimbus-theme          ;An awesome dark theme
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     ;use-package           ;A configuration macro for simplifying your .emacs
