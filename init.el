@@ -104,6 +104,7 @@
     evil                  ;Extensible Vi layer for Emacs.
     benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
+    spacemacs-theme       ;Color theme with a dark and light versions
     monokai-theme         ;A fruity color theme for Emacs.
     darktooth-theme       ; the darkness... it watches
     gruvbox-theme         ;retro-groove colour theme for Emacs
@@ -117,7 +118,6 @@
     simplicity-theme      ;A minimalist dark theme
     molokai-theme         ;molokai theme with Emacs theme engine
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
-    ;monokai-pro-theme     ;A simple theme based on the Monokai Pro Sublime color schemes
     nimbus-theme          ;An awesome dark theme
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     darkokai-theme        ;A darker variant on Monokai.
