@@ -120,6 +120,10 @@
     ;monokai-pro-theme     ;A simple theme based on the Monokai Pro Sublime color schemes
     nimbus-theme          ;An awesome dark theme
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
+    darkokai-theme        ;A darker variant on Monokai.
+    darkburn-theme        ;A not-so-low contrast color theme for Emacs.
+    kosmos-theme          ;Black and lightgray theme with not so much syntax highlighting.
+    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
