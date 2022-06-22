@@ -121,9 +121,7 @@
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     darkokai-theme        ;A darker variant on Monokai.
     darkburn-theme        ;A not-so-low contrast color theme for Emacs.
-    kosmos-theme          ;Black and lightgray theme with not so much syntax highlighting.
     colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
-    immaterial-theme      ;flexible theme based on material design principles
     material-theme        ;Theme based on the colors of the Google Material Design
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
