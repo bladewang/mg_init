@@ -119,7 +119,6 @@
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
     nimbus-theme          ;An awesome dark theme
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
-    darkokai-theme        ;A darker variant on Monokai.
     darkburn-theme        ;A not-so-low contrast color theme for Emacs.
     colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
     material-theme        ;Theme based on the colors of the Google Material Design
