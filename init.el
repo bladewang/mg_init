@@ -130,6 +130,13 @@
     magit                 ;A Git porcelain inside Emacs.
     sicp                  ;Structure and Interpretation of Computer Programs in info format
     ;elpy                  ;Emacs Python Development Environment
+    ;geiser                ;GNU Emacs and Scheme talk to each other
+    ;geiser-chez           ;Chez Scheme's implementation of the geiser protocols
+    ;geiser-chibi          ;Chibi Scheme's implementation of the geiser protocols
+    ;geiser-gambit         ;Gambit's implementation of the geiser protocols
+    ;geiser-guile          ;Guile's implementation of the geiser protocols
+    ;geiser-mit            ;MIT/GNU Scheme's implementation of the geiser protocols
+    ;geiser-racket         ;Support for Racket in Geiser
     j-mode                ;Major mode for editing J programs
     vlf                   ;View Large Files
     w3m                   ;an Emacs interface to w3m
