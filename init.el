@@ -21,10 +21,12 @@
 
 ;;; config melpa
 (require 'package)
-(add-to-list
-  'package-archives
-  '("melpa"    . "http://melpa.org/packages/")
-  t)
+
+(dolist (p '(("melpa" . "https://melpa.org/packages/")
+             ("gnu"   . "https://elpa.gnu.org/packages/")
+             ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+  (add-to-list 'package-archives p t))
+
 ;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
