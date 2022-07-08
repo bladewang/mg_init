@@ -114,13 +114,13 @@
     ample-theme           ;Dark Theme for Emacs
     cyberpunk-theme       ;Cyberpunk Color Theme
     modus-themes          ;Elegant, highly legible and customizable themes
-    almost-mono-themes    ;Almost monochromatic color themes
     creamsody-theme       ;Straight from the soda fountain.
-    simplicity-theme      ;A minimalist dark theme
     molokai-theme         ;molokai theme with Emacs theme engine
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
     nimbus-theme          ;An awesome dark theme
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
+    sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
+    eziam-theme           ;A mostly monochrome theme, inspired by Tao and Leuven, with dark and light versions.
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
     darkburn-theme        ;A not-so-low contrast color theme for Emacs.
     colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
