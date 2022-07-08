@@ -137,6 +137,7 @@
     ;geiser-guile          ;Guile's implementation of the geiser protocols
     ;geiser-mit            ;MIT/GNU Scheme's implementation of the geiser protocols
     ;geiser-racket         ;Support for Racket in Geiser
+    ;lispy                 ;vi-like Paredit
     j-mode                ;Major mode for editing J programs
     vlf                   ;View Large Files
     w3m                   ;an Emacs interface to w3m
