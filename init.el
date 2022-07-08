@@ -107,24 +107,24 @@
     benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
     spacemacs-theme       ;Color theme with a dark and light versions
-    monokai-theme         ;A fruity color theme for Emacs.
-    darktooth-theme       ; the darkness... it watches
-    gruvbox-theme         ;retro-groove colour theme for Emacs
-    moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
-    ample-theme           ;Dark Theme for Emacs
     cyberpunk-theme       ;Cyberpunk Color Theme
     modus-themes          ;Elegant, highly legible and customizable themes
-    creamsody-theme       ;Straight from the soda fountain.
+    monokai-theme         ;A fruity color theme for Emacs.
     molokai-theme         ;molokai theme with Emacs theme engine
     monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
+    moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
+    darkburn-theme        ;A not-so-low contrast color theme for Emacs.
+    darktooth-theme       ; the darkness... it watches
+    gruvbox-theme         ;retro-groove colour theme for Emacs
+    ample-theme           ;Dark Theme for Emacs
     nimbus-theme          ;An awesome dark theme
+    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
+    material-theme        ;Theme based on the colors of the Google Material Design
+    creamsody-theme       ;Straight from the soda fountain.
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
     eziam-theme           ;A mostly monochrome theme, inspired by Tao and Leuven, with dark and light versions.
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
-    darkburn-theme        ;A not-so-low contrast color theme for Emacs.
-    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
-    material-theme        ;Theme based on the colors of the Google Material Design
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
