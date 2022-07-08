@@ -123,7 +123,6 @@
     creamsody-theme       ;Straight from the soda fountain.
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
-    eziam-theme           ;A mostly monochrome theme, inspired by Tao and Leuven, with dark and light versions.
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
