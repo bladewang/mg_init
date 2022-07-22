@@ -131,6 +131,7 @@
     ;elpy                  ;Emacs Python Development Environment
     ;geiser                ;GNU Emacs and Scheme talk to each other
     ;geiser-chez           ;Chez Scheme's implementation of the geiser protocols
+    ;;;   (setq geiser-chez-binary "chez") ;; for mac
     ;geiser-chibi          ;Chibi Scheme's implementation of the geiser protocols
     ;geiser-gambit         ;Gambit's implementation of the geiser protocols
     ;geiser-guile          ;Guile's implementation of the geiser protocols
