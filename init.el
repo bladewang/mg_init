@@ -22,8 +22,8 @@
 ;;; config melpa
 (require 'package)
 
-(dolist (p '(("melpa" . "http://melpa.org/packages/")
-             ("gnu"   . "http://elpa.gnu.org/packages/")
+(dolist (p '(("melpa"  . "http://melpa.org/packages/")
+             ("gnu"    . "http://elpa.gnu.org/packages/")
              ("nongnu" . "http://elpa.nongnu.org/nongnu/")))
   (add-to-list 'package-archives p t))
 
