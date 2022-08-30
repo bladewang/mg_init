@@ -3,7 +3,10 @@
 
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
-(tool-bar-mode -1)
+
+(ignore-errors
+    (tool-bar-mode -1))
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
 (put 'upcase-region 'disabled nil)
