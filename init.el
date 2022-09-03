@@ -4,8 +4,7 @@
 (setq inhibit-startup-screen t)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 
-(ignore-errors
-    (tool-bar-mode -1))
+(tool-bar-mode -1)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
