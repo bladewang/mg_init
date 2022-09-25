@@ -56,6 +56,12 @@
   :bind
   ("C-M-s" . 'swiper-isearch))
 
+(use-package j-mode
+  :ensure t
+  :config
+  ;; for j90x
+  (setq j-console-cmd "jconsole"))
+
 (use-package undo-tree
   :ensure t
   :defer t
