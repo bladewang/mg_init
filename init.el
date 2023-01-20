@@ -25,7 +25,7 @@
 ;;; config melpa
 (require 'package)
 
-(dolist (p '(("melpa"  . "http://melpa.org/packages/")
+(dolist (p '(("melpa-stable" . "http://stable.melpa.org/packages/")
              ("gnu"    . "http://elpa.gnu.org/packages/")
              ("nongnu" . "http://elpa.nongnu.org/nongnu/")))
   (add-to-list 'package-archives p t))
@@ -120,24 +120,28 @@
     cyberpunk-theme       ;Cyberpunk Color Theme
     modus-themes          ;Elegant, highly legible and customizable themes
     monokai-theme         ;A fruity color theme for Emacs.
-    molokai-theme         ;molokai theme with Emacs theme engine
-    monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
-    darkburn-theme        ;A not-so-low contrast color theme for Emacs.
     darktooth-theme       ; the darkness... it watches
     gruvbox-theme         ;retro-groove colour theme for Emacs
     ample-theme           ;Dark Theme for Emacs
     nimbus-theme          ;An awesome dark theme
-    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
     material-theme        ;Theme based on the colors of the Google Material Design
     creamsody-theme       ;Straight from the soda fountain.
-    phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
-    sicp                  ;Structure and Interpretation of Computer Programs in info format
+
+    ;;; packages in melpa
+;    w3m                   ;an Emacs interface to w3m
+;    sicp                  ;Structure and Interpretation of Computer Programs in info format
+;    phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
+;    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
+;    molokai-theme         ;molokai theme with Emacs theme engine
+;    monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
+
+    ;;; some other packages
     ;elpy                  ;Emacs Python Development Environment
     ;geiser                ;GNU Emacs and Scheme talk to each other
     ;geiser-chez           ;Chez Scheme's implementation of the geiser protocols
@@ -150,7 +154,6 @@
     ;lispy                 ;vi-like Paredit
     j-mode                ;Major mode for editing J programs
     vlf                   ;View Large Files
-    w3m                   ;an Emacs interface to w3m
     qrencode              ;QRCode encoder
     ))
 
