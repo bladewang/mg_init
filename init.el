@@ -30,6 +30,7 @@
              ("nongnu" . "http://elpa.nongnu.org/nongnu/")))
   (add-to-list 'package-archives p t))
 
+;;	     ("melpa"  . "http://melpa.org/packages/")
 ;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
@@ -44,6 +45,9 @@
 
 (when (not (package-installed-p 'use-package))
   (package-install 'use-package))
+
+(when (not (package-installed-p 'quelpa-use-package))
+  (package-install 'quelpa-use-package))
 
 (use-package counsel
   :ensure t
