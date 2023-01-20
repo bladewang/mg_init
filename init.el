@@ -140,6 +140,7 @@
 ;    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
 ;    molokai-theme         ;molokai theme with Emacs theme engine
 ;    monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
+;    j-mode                ;Major mode for editing J programs
 
     ;;; some other packages
     ;elpy                  ;Emacs Python Development Environment
@@ -152,7 +153,7 @@
     ;geiser-mit            ;MIT/GNU Scheme's implementation of the geiser protocols
     ;geiser-racket         ;Support for Racket in Geiser
     ;lispy                 ;vi-like Paredit
-    j-mode                ;Major mode for editing J programs
+
     vlf                   ;View Large Files
     qrencode              ;QRCode encoder
     ))
