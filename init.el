@@ -136,6 +136,7 @@
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
     magit                 ;A Git porcelain inside Emacs.
+    vundo                 ;Visual undo tree
 
     ;;; packages in melpa
 ;    w3m                   ;an Emacs interface to w3m
