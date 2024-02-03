@@ -20,6 +20,9 @@
               ediff-forward-word-function  'forward-char
               diff-switches "-u")
 
+;; set ediff control panel not to split apart from main gui frame
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
 ;;; config melpa
