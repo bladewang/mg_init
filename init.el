@@ -28,15 +28,17 @@
 ;;; config melpa
 (require 'package)
 
-(dolist (p '(("melpa-stable" . "http://stable.melpa.org/packages/")
-             ("gnu"    . "http://elpa.gnu.org/packages/")
-             ("nongnu" . "http://elpa.nongnu.org/nongnu/")))
-  (add-to-list 'package-archives p t))
-
+;;    ("gnu"    . "http://elpa.gnu.org/packages/")
+;;    ("nongnu" . "http://elpa.nongnu.org/nongnu/")
+;;    ("melpa-stable" . "http://stable.melpa.org/packages/")
 ;;    ("melpa"  . "http://melpa.org/packages/")
 ;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
+(dolist (p '(
+	     ("melpa-stable" . "http://stable.melpa.org/packages/")
+	     ))
+  (add-to-list 'package-archives p t))
 (package-initialize)
 
 ;(require 'benchmark-init)
@@ -110,7 +112,9 @@
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
 
+
 (defvar my/packages
+  ;;; packages in elpa & melpa-stable
   '(ag                    ;A front-end for ag ('the silver searcher'), the C ack replacement.
     ;ace-window            ;Quickly switch windows.
     ;undo-tree             ;Treat undo history as a tree
@@ -127,7 +131,6 @@
     monokai-theme         ;A fruity color theme for Emacs.
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
     darktooth-theme       ; the darkness... it watches
-    gruvbox-theme         ;retro-groove colour theme for Emacs
     ample-theme           ;Dark Theme for Emacs
     nimbus-theme          ;An awesome dark theme
     material-theme        ;Theme based on the colors of the Google Material Design
@@ -136,20 +139,8 @@
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
     ;use-package           ;A configuration macro for simplifying your .emacs
     ;counsel               ;Various completion functions using Ivy
-    magit                 ;A Git porcelain inside Emacs.
+    ;magit                 ;A Git porcelain inside Emacs.
     vundo                 ;Visual undo tree
-
-    ;;; packages in melpa
-;    w3m                   ;an Emacs interface to w3m
-;    sicp                  ;Structure and Interpretation of Computer Programs in info format
-;    phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
-;    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
-;    molokai-theme         ;molokai theme with Emacs theme engine
-;    monokai-alt-theme     ;Theme with a dark background. Based on sublime monokai theme.
-;    solarized-theme       ;The Solarized color theme
-;    j-mode                ;Major mode for editing J programs
-;    vterm                 ;Fully-featured terminal emulator
-;    i-ching               ;The Book of Changes
 
     ;;; some other packages
     ;elpy                  ;Emacs Python Development Environment
@@ -161,16 +152,49 @@
     ;geiser-guile          ;Guile's implementation of the geiser protocols
     ;geiser-mit            ;MIT/GNU Scheme's implementation of the geiser protocols
     ;geiser-racket         ;Support for Racket in Geiser
-    ;lispy                 ;vi-like Paredit
+    lispy                 ;vi-like Paredit
 
     vlf                   ;View Large Files
     qrencode              ;QRCode encoder
     ))
 
+(defvar my/packages-melpa
+  '(;;; packages in melpa
+    magit                 ;A Git porcelain inside Emacs.
+    w3m                   ;an Emacs interface to w3m
+    sicp                  ;Structure and Interpretation of Computer Programs in info format
+    phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
+    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
+    solarized-theme       ;The Solarized color theme
+    j-mode                ;Major mode for editing J programs
+    vterm                 ;Fully-featured terminal emulator
+    i-ching               ;The Book of Changes
+ ))
 
-(dolist (pkg my/packages)
-  (when (not (package-installed-p pkg))
-    (package-install pkg)))
+(defun my/packages-install (pkgs)
+  (dolist (pkg pkgs)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
+
+(my/packages-install my/packages)
+
+(defun my/packages-install-from (pkgs src)
+       (setq my/archives-bak package-archives)
+       (setq package-archives src)
+
+       (package-refresh-contents)
+       (my/packages-install pkgs)
+
+       (setq package-archives my/archives-bak)
+       (package-refresh-contents)
+       )
+
+(when (seq-find (lambda (x) (not (package-installed-p x)))
+		my/packages-melpa)
+  (my/packages-install-from my/packages-melpa
+			    '(("melpa"  . "http://melpa.org/packages/")
+			      ("gnu"    . "http://elpa.gnu.org/packages/")
+			      ("nongnu" . "http://elpa.nongnu.org/nongnu/"))))
 
 ;;; for emacsclient
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
