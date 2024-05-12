@@ -125,7 +125,6 @@
     spacemacs-theme       ;Color theme with a dark and light versions
     nano-theme            ;N Λ N O theme
     cyberpunk-theme       ;Cyberpunk Color Theme
-    modus-themes          ;Elegant, highly legible and customizable themes
     monokai-theme         ;A fruity color theme for Emacs.
     moe-theme             ;colorful eye-candy theme. Moe, moe, kyun!
     darktooth-theme       ; the darkness... it watches
