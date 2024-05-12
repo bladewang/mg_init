@@ -33,7 +33,7 @@
              ("nongnu" . "http://elpa.nongnu.org/nongnu/")))
   (add-to-list 'package-archives p t))
 
-;;	     ("melpa"  . "http://melpa.org/packages/")
+;;    ("melpa"  . "http://melpa.org/packages/")
 ;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 ;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
