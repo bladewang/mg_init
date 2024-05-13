@@ -55,8 +55,6 @@
 (when (not (package-installed-p 'quelpa-use-package))
   (package-install 'quelpa-use-package))
 
-(require 'quelpa-use-package)
-
 (use-package counsel
   :ensure t
   :config
@@ -70,7 +68,7 @@
   ("C-M-s" . 'swiper-isearch))
 
 (use-package j-mode
-  :quelpa (j-mode :fetcher github :repo "LdBeth/j-mode")
+  :pin melpa
   :config
   ;; for j90x
   (setq j-console-cmd "jconsole"))
