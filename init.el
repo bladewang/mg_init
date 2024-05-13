@@ -171,26 +171,23 @@
     i-ching               ;The Book of Changes
  ))
 
-(defun my/packages-install (pkgs)
-  (dolist (pkg pkgs)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
+(defun my/packages-not-installed (pkgs)
+  (seq-filter (lambda (x) (not (package-installed-p x))) pkgs))
 
-(my/packages-install my/packages)
+(dolist (pkg (my/packages-not-installed my/packages))
+    (package-install pkg))
 
 (defun my/packages-install-from (pkgs src)
        (setq my/archives-bak package-archives)
        (setq package-archives src)
 
        (package-refresh-contents)
-       (my/packages-install pkgs)
+       (dolist (pkg pkgs) (package-install pkg))
 
        (setq package-archives my/archives-bak)
-       (package-refresh-contents)
-       )
+       (package-refresh-contents))
 
-(when-let ((pkgs (seq-filter (lambda (x) (not (package-installed-p x)))
-			     my/packages-melpa)))
+(when-let ((pkgs (my/packages-not-installed my/packages-melpa)))
   (my/packages-install-from pkgs
 			    '(("melpa"  . "http://melpa.org/packages/")
 			      ("gnu"    . "http://elpa.gnu.org/packages/")
