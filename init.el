@@ -42,18 +42,23 @@
   (add-to-list 'package-archives p t))
 (package-initialize)
 
-;(require 'benchmark-init)
+(require 'benchmark-init)
 ;; To disable collection of benchmark data after init is done.
-;(add-hook 'after-init-hook 'benchmark-init/deactivate)
+(add-hook 'after-init-hook 'benchmark-init/deactivate)
 
-(when (not package-archive-contents)
+(unless package-archive-contents
   (package-refresh-contents))
 
-(when (not (package-installed-p 'use-package))
+(unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-(when (not (package-installed-p 'quelpa-use-package))
+(unless (package-installed-p 'quelpa-use-package)
   (package-install 'quelpa-use-package))
+
+(unless (package-installed-p 'vc-use-package)
+  ;; just from emacs 2.9
+  (package-vc-install "https://github.com/slotThe/vc-use-package"))
+(require 'vc-use-package)
 
 (use-package counsel
   :ensure t
@@ -68,7 +73,7 @@
   ("C-M-s" . 'swiper-isearch))
 
 (use-package j-mode
-  :pin melpa
+  :vc (:fetcher github :repo LdBeth/j-mode)
   :defer t
   :config
   ;; for j90x
