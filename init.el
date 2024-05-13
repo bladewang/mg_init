@@ -167,7 +167,6 @@
     w3m                   ;an Emacs interface to w3m
     sicp                  ;Structure and Interpretation of Computer Programs in info format
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
-    colonoscopy-theme     ;an Emacs 24 theme based on Colonoscopy (tmTheme)
     solarized-theme       ;The Solarized color theme
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
