@@ -42,9 +42,9 @@
   (add-to-list 'package-archives p t))
 (package-initialize)
 
-(require 'benchmark-init)
+;(require 'benchmark-init)
 ;; To disable collection of benchmark data after init is done.
-(add-hook 'after-init-hook 'benchmark-init/deactivate)
+;(add-hook 'after-init-hook 'benchmark-init/deactivate)
 
 (unless package-archive-contents
   (package-refresh-contents))
