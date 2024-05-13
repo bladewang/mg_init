@@ -36,6 +36,7 @@
 ;;    ("org-cn"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
 (dolist (p '(
+	     ("melpa"  . "https://melpa.org/packages/")
 	     ("melpa-stable" . "https://stable.melpa.org/packages/")
 	     ))
   (add-to-list 'package-archives p t))
@@ -67,9 +68,13 @@
   ("C-M-s" . 'swiper-isearch))
 
 (use-package j-mode
+  :pin melpa
   :config
   ;; for j90x
   (setq j-console-cmd "jconsole"))
+
+(use-package magit
+  :pin melpa)
 
 (use-package undo-tree
   :ensure t
@@ -172,24 +177,10 @@
 (defun my/packages-not-installed (pkgs)
   (seq-filter (lambda (x) (not (package-installed-p x))) pkgs))
 
-(dolist (pkg (my/packages-not-installed my/packages))
+(dolist (pkg (my/packages-not-installed (append my/packages
+						my/packages-melpa)))
     (package-install pkg))
 
-(defun my/packages-install-from (pkgs src)
-       (setq my/archives-bak package-archives)
-       (setq package-archives src)
-
-       (package-refresh-contents)
-       (dolist (pkg pkgs) (package-install pkg))
-
-       (setq package-archives my/archives-bak)
-       (package-refresh-contents))
-
-(when-let ((pkgs (my/packages-not-installed my/packages-melpa)))
-  (my/packages-install-from pkgs
-			    '(("melpa"  . "https://melpa.org/packages/")
-			      ("gnu"    . "https://elpa.gnu.org/packages/")
-			      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
 ;;; for emacsclient
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
