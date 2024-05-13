@@ -69,11 +69,13 @@
 
 (use-package j-mode
   :pin melpa
+  :defer t
   :config
   ;; for j90x
   (setq j-console-cmd "jconsole"))
 
 (use-package magit
+  :defer t
   :pin melpa)
 
 (use-package undo-tree
@@ -95,6 +97,7 @@
 
 (use-package elpy
   ;; to activate, M-: (elpy-enable)
+  :defer t
   :commands elpy-enable
   :init
   (setq python-shell-interpreter "python3"))
