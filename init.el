@@ -56,7 +56,6 @@
   (package-install 'quelpa-use-package))
 
 (unless (package-installed-p 'vc-use-package)
-  ;; just from emacs 2.9
   (package-vc-install "https://github.com/slotThe/vc-use-package"))
 (require 'vc-use-package)
 
