@@ -28,15 +28,15 @@
 ;;; config melpa
 (require 'package)
 
-;;    ("gnu"    . "http://elpa.gnu.org/packages/")
-;;    ("nongnu" . "http://elpa.nongnu.org/nongnu/")
-;;    ("melpa-stable" . "http://stable.melpa.org/packages/")
-;;    ("melpa"  . "http://melpa.org/packages/")
-;;    ("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;;    ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+;;    ("gnu"    . "https://elpa.gnu.org/packages/")
+;;    ("nongnu" . "https://elpa.nongnu.org/nongnu/")
+;;    ("melpa-stable" . "https://stable.melpa.org/packages/")
+;;    ("melpa"  . "https://melpa.org/packages/")
+;;    ("melpa-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+;;    ("org-cn"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
 (dolist (p '(
-	     ("melpa-stable" . "http://stable.melpa.org/packages/")
+	     ("melpa-stable" . "https://stable.melpa.org/packages/")
 	     ))
   (add-to-list 'package-archives p t))
 (package-initialize)
@@ -67,7 +67,6 @@
   ("C-M-s" . 'swiper-isearch))
 
 (use-package j-mode
-  :ensure t
   :config
   ;; for j90x
   (setq j-console-cmd "jconsole"))
@@ -91,7 +90,6 @@
 
 (use-package elpy
   ;; to activate, M-: (elpy-enable)
-  :ensure t
   :commands elpy-enable
   :init
   (setq python-shell-interpreter "python3"))
@@ -189,9 +187,9 @@
 
 (when-let ((pkgs (my/packages-not-installed my/packages-melpa)))
   (my/packages-install-from pkgs
-			    '(("melpa"  . "http://melpa.org/packages/")
-			      ("gnu"    . "http://elpa.gnu.org/packages/")
-			      ("nongnu" . "http://elpa.nongnu.org/nongnu/"))))
+			    '(("melpa"  . "https://melpa.org/packages/")
+			      ("gnu"    . "https://elpa.gnu.org/packages/")
+			      ("nongnu" . "https://elpa.nongnu.org/nongnu/"))))
 
 ;;; for emacsclient
 ;;; alias em='emacsclient -t -a "emacs -Q -l ~/mg_init/init.el " '
