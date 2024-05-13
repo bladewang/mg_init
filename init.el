@@ -1,4 +1,4 @@
-
+;; for Emacs 2.9
 (setq gc-cons-threshold (* 50 1000 1000))
 
 (setq inhibit-startup-screen t)
