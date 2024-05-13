@@ -189,9 +189,9 @@
        (package-refresh-contents)
        )
 
-(when (seq-find (lambda (x) (not (package-installed-p x)))
-		my/packages-melpa)
-  (my/packages-install-from my/packages-melpa
+(when-let ((pkgs (seq-filter (lambda (x) (not (package-installed-p x)))
+			   my/packages-melpa)))
+  (my/packages-install-from pkgs
 			    '(("melpa"  . "http://melpa.org/packages/")
 			      ("gnu"    . "http://elpa.gnu.org/packages/")
 			      ("nongnu" . "http://elpa.nongnu.org/nongnu/"))))
