@@ -5,7 +5,7 @@
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 
 (tool-bar-mode -1)
-(menu-bar-no-scroll-bar)
+(scroll-bar-mode -1)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
