@@ -25,6 +25,10 @@
 
 ;;; (setq-default default-case-fold-search nil) ;;; :set ignorecase
 
+;;; C-u C-SPC C-SPC C-SPC ...
+;;; or Cu C-@ C-@ C-@ ...
+(setq set-mark-command-repeat-pop t)
+
 ;;; config melpa
 (require 'package)
 
