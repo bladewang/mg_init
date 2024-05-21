@@ -188,6 +188,7 @@
   '(;;; packages in melpa
     magit                 ;A Git porcelain inside Emacs.
     w3m                   ;an Emacs interface to w3m
+    nov                   ;Featureful EPUB reader mode
     sicp                  ;Structure and Interpretation of Computer Programs in info format
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     solarized-theme       ;The Solarized color theme
