@@ -95,7 +95,7 @@
   :config
   (global-undo-tree-mode)
   :bind
-  ("C-x u" . undo-tree-visualize))
+  ("C-x u" . 'undo-tree-visualize))
 
 (use-package ace-window
   :ensure t
