@@ -178,6 +178,7 @@
     sicp                  ;Structure and Interpretation of Computer Programs in info format
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     solarized-theme       ;The Solarized color theme
+    nova-theme            ;A dark, pastel color theme
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
     i-ching               ;The Book of Changes
