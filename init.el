@@ -86,6 +86,13 @@
   :defer t
   :pin melpa)
 
+(use-package vterm
+  :defer t
+  :pin melpa
+  :bind*
+  ;; input C-x to vterm by C-q C-x
+  ("C-q" . 'vterm-send-next-key))
+
 (use-package undo-tree
   :ensure t
   :defer t
