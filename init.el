@@ -93,6 +93,12 @@
   ;; input C-x to vterm by C-q C-x
   ("C-q" . 'vterm-send-next-key))
 
+(use-package nov
+  :defer t
+  :pin melpa
+  :init
+  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+
 (use-package undo-tree
   :ensure t
   :defer t
