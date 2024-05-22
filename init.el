@@ -153,7 +153,6 @@
     evil                  ;Extensible Vi layer for Emacs.
     benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
-    spacemacs-theme       ;Color theme with a dark and light versions
     nano-theme            ;N Λ N O theme
     monokai-theme         ;A fruity color theme for Emacs.
     darktooth-theme       ; the darkness... it watches
