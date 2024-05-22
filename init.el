@@ -196,6 +196,7 @@
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
     i-ching               ;The Book of Changes
+    ;picpocket             ;Image browser, with particular support for tag edit & filter
  ))
 
 (defun my/packages-not-installed (pkgs)
