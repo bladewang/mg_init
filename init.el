@@ -164,7 +164,6 @@
     ;counsel               ;Various completion functions using Ivy
     ;magit                 ;A Git porcelain inside Emacs.
     vundo                 ;Visual undo tree
-
     ;;; some other packages
     ;elpy                  ;Emacs Python Development Environment
     ;geiser                ;GNU Emacs and Scheme talk to each other
@@ -175,8 +174,8 @@
     ;geiser-guile          ;Guile's implementation of the geiser protocols
     ;geiser-mit            ;MIT/GNU Scheme's implementation of the geiser protocols
     ;geiser-racket         ;Support for Racket in Geiser
+    ;sml-mode              ;Major mode for editing (Standard) ML
     lispy                 ;vi-like Paredit
-
     vlf                   ;View Large Files
     qrencode              ;QRCode encoder
     ))
