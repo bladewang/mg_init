@@ -153,11 +153,9 @@
     evil                  ;Extensible Vi layer for Emacs.
     benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
-    nano-theme            ;N Λ N O theme
     monokai-theme         ;A fruity color theme for Emacs.
     darktooth-theme       ; the darkness... it watches
     ample-theme           ;Dark Theme for Emacs
-    nimbus-theme          ;An awesome dark theme
     material-theme        ;Theme based on the colors of the Google Material Design
     creamsody-theme       ;Straight from the soda fountain.
     sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
