@@ -89,6 +89,8 @@
 (use-package vterm
   :defer t
   :pin melpa
+  :init
+  (setq vterm-max-scrollback 100000)
   :bind*
   ;; input C-x to vterm by C-q C-x
   ("C-q" . 'vterm-send-next-key))
