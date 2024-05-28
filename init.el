@@ -93,7 +93,11 @@
   (setq vterm-max-scrollback 100000)
   :bind*
   ;; input C-x to vterm by C-q C-x
-  ("C-q" . 'vterm-send-next-key))
+  ;; ("C-q" . 'vterm-send-next-key)
+  ;; C-q bind to quoted-insert by defult
+  ;;     ,use :map to limit the map just bind in vterm
+  (:map vterm-mode-map
+	("C-q" . 'vterm-send-next-key)))
 
 (use-package nov
   :defer t
