@@ -198,6 +198,7 @@
     kuronami-theme        ;A deep blue theme with cool autumnal colors
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
+    multi-vterm           ;Like multi-term.el but for vterm
     i-ching               ;The Book of Changes
     ;picpocket             ;Image browser, with particular support for tag edit & filter
  ))
