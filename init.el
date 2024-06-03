@@ -145,6 +145,10 @@
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
 
+(use-package calendar
+  :defer t
+  :config
+  (calendar-set-date-style 'iso))
 
 (defvar my/packages
   ;;; packages in elpa & melpa-stable
