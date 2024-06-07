@@ -203,6 +203,7 @@
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
     multi-vterm           ;Like multi-term.el but for vterm
+    rg                    ;A search tool based on ripgrep
     i-ching               ;The Book of Changes
     ;picpocket             ;Image browser, with particular support for tag edit & filter
  ))
