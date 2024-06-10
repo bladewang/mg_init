@@ -36,8 +36,6 @@
 ;;    ("nongnu" . "https://elpa.nongnu.org/nongnu/")
 ;;    ("melpa-stable" . "https://stable.melpa.org/packages/")
 ;;    ("melpa"  . "https://melpa.org/packages/")
-;;    ("melpa-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;;    ("org-cn"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
 
 (dolist (p '(
 	     ("melpa"  . "https://melpa.org/packages/")
