@@ -36,8 +36,7 @@
 ;;    ("nongnu" . "https://elpa.nongnu.org/nongnu/")
 ;;    ("melpa-stable" . "https://stable.melpa.org/packages/")
 ;;    ("melpa"  . "https://melpa.org/packages/")
-;;    ("melpa-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-;;    ("org-cn"   . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+
 
 (dolist (p '(
 	     ("melpa"  . "https://melpa.org/packages/")
@@ -225,3 +224,18 @@
 
 (setq gc-cons-threshold (* 2 1000 1000))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "d92c1c36a5181cf629749bf6feee1886cf6bce248ab075c9d1b1f6096fea9539" "77f1e155387d355fbbb3b382a28da41cc709b2a1cc71e7ede03ee5c1859468d2" "96005f97499f0549f921f81588f190f189b7acb8bbebbcbb9033cdd340118f80" "39dd7106e6387e0c45dfce8ed44351078f6acd29a345d8b22e7b8e54ac25bac4" default))
+ '(package-selected-packages
+   '(arduino-mode rg howm deft multi-vterm timu-spacegrey-theme kuronami-theme sml-mode zoom wgrep-ag w3m vundo vterm vlf vc-use-package undo-tree tao-theme solarized-theme sicp sexy-monochrome-theme quelpa-use-package qrencode pyim-basedict pyim phoenix-dark-mono-theme nova-theme nov nimbus-theme nano-theme monokai-theme material-theme magit lispy j-mode i-ching evil dired-single darktooth-theme creamsody-theme counsel benchmark-init ample-theme ag afternoon-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(diary ((t (:background "dark green" :foreground "Yellow")))))
