@@ -19,7 +19,7 @@
            (margin-height (truncate (/ (- window-height image-height) 2))))
 
       (let ((inhibit-read-only t))
-	(progn (goto-char (point-min))
+	(progn (goto-line 1)
 	       (insert (make-string margin-height ?\n))
 	       (goto-line (+ 1 margin-height))
 	       (insert (make-string margin-width ?\s))))
