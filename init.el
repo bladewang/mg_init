@@ -10,28 +10,26 @@
 
 
 (defun my-center-image ()
-    (set-window-margins nil 0 0)
+
     (let* ((window-width (window-total-width))
            (window-height (window-total-height))
 	   (image-width (car (image-size (image-get-display-property))))
            (image-height (cdr (image-size (image-get-display-property))))
-           (margin-width (round (/ (- window-width image-width) 2)))
-           (margin-height (round (/ (- window-height image-height) 2)))
-	   )
+           (margin-width (truncate (/ (- window-width image-width) 2)))
+           (margin-height (truncate (/ (- window-height image-height) 2))))
+
       (message "got little progress ???")
 
-     ;(let ((inhibit-read-only t)) (save-excursion (goto-char (point-min))
-     ;      (insert (make-string 3 ?\n))))
+      (let ((inhibit-read-only t))
+	(progn (goto-char (point-min))
+	       (insert (make-string margin-height ?\n))))
 
-      (setq left-margin-width (max 0 margin-width))
-      (setq right-margin-width (max 0 margin-width))
-      (setq top-margin-width (max 0 margin-height))
-      (setq bottom-margin-width (max 0 margin-height))
-      ;(set-window-buffer nil (current-buffer))
-      (set-window-margins nil margin-width margin-width)
+      (set-buffer-modified-p nil)
       ))
 
 (add-hook 'image-mode-hook 'my-center-image)
+
+
 
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
