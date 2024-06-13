@@ -10,7 +10,7 @@
 
 
 (defun my-center-image ()
-
+    "hook function to display image on the center of window"
     (let* ((window-width (window-total-width))
            (window-height (window-total-height))
 	   (image-width (car (image-size (image-get-display-property))))
