@@ -18,16 +18,13 @@
            (margin-width (truncate (/ (- window-width image-width) 2)))
            (margin-height (truncate (/ (- window-height image-height) 2))))
 
-      (message "got little progress ???")
-
       (let ((inhibit-read-only t))
 	(progn (goto-char (point-min))
 	       (insert (make-string margin-height ?\n))
 	       (goto-line (+ 1 margin-height))
 	       (insert (make-string margin-width ?\s))))
 
-      (set-buffer-modified-p nil)
-      ))
+      (set-buffer-modified-p nil)))
 
 (add-hook 'image-mode-hook 'my-center-image)
 
