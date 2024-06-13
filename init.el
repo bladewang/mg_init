@@ -22,13 +22,14 @@
 
       (let ((inhibit-read-only t))
 	(progn (goto-char (point-min))
-	       (insert (make-string margin-height ?\n))))
+	       (insert (make-string margin-height ?\n))
+	       (goto-line (+ 1 margin-height))
+	       (insert (make-string margin-width ?\s))))
 
       (set-buffer-modified-p nil)
       ))
 
 (add-hook 'image-mode-hook 'my-center-image)
-
 
 
 (fset 'yes-or-no-p 'y-or-n-p)
