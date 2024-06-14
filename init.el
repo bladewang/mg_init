@@ -8,27 +8,6 @@
 (scroll-bar-mode -1)
 
 
-
-(defun my-center-image ()
-    "hook function to display image on the center of window"
-    (let* ((window-width (window-total-width))
-           (window-height (window-total-height))
-	   (image-width (car (image-size (image-get-display-property))))
-           (image-height (cdr (image-size (image-get-display-property))))
-           (margin-width (truncate (/ (- window-width image-width) 2)))
-           (margin-height (truncate (/ (- window-height image-height) 2))))
-
-      (let ((inhibit-read-only t))
-	(progn (goto-line 1)
-	       (insert (make-string margin-height ?\n))
-	       (goto-line (+ 1 margin-height))
-	       (insert (make-string margin-width ?\s))))
-
-      (set-buffer-modified-p nil)))
-
-(add-hook 'image-mode-hook 'my-center-image)
-
-
 (fset 'yes-or-no-p 'y-or-n-p)
 (column-number-mode t)
 (put 'upcase-region 'disabled nil)
@@ -164,6 +143,25 @@
   :bind (:map dired-mode-map
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
+
+(use-package image
+  :defer t
+  :init
+  (defun my/center-image ()
+    "hook function to display image on the center of window"
+    (let* ((window-width  (window-total-width))
+           (window-height (window-total-height))
+	   (image-width   (car (image-size (image-get-display-property))))
+           (image-height  (cdr (image-size (image-get-display-property))))
+           (margin-width  (truncate (/ (- window-width  image-width)  2)))
+           (margin-height (truncate (/ (- window-height image-height) 2)))
+	   (inhibit-read-only t))
+      (progn (goto-line 1)
+	     (insert (make-string margin-height ?\n))
+	     (goto-line (+ 1 margin-height))
+	     (insert (make-string margin-width ?\s)))
+      (set-buffer-modified-p nil)))
+  (add-hook 'image-mode-hook 'my/center-image))
 
 (use-package calendar
   :defer t
