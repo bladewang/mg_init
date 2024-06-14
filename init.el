@@ -75,7 +75,7 @@
   ("C-M-s" . 'swiper-isearch))
 
 (use-package j-mode
-  :vc (:fetcher github :repo LdBeth/j-mode)
+  :pin melpa
   :defer t
   :config
   ;; for j90x
