@@ -114,7 +114,7 @@
   :defer t
   :init
   (defun my/map-meow-insert-exit ()
-    (define-key meow-insert-state-keymap ["C-c"] 'meow-insert-exit))
+    (define-key meow-insert-state-keymap (kbd "ESC") 'meow-insert-exit))
   (add-hook 'meow-global-mode-hook 'my/map-meow-insert-exit))
 
 (use-package undo-tree
@@ -257,3 +257,20 @@
 
 (setq gc-cons-threshold (* 2 1000 1000))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "c71fd8fbda070ff5462e052d8be87423e50d0f437fbc359a5c732f4a4c535c43" "9c72688b960c505a8495585ddd9a9764e991884ebf87c7fbedc3f31851d2add2" "77f1e155387d355fbbb3b382a28da41cc709b2a1cc71e7ede03ee5c1859468d2" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307" "1a6d120936f9df3f44953124dbf9e56b399e021702ca7d1844e6c5e1658b692b" "02fefdfc9a0c7256a10c8794a4985c9c70c5fbf674873b66807e8143e02c81a7" "986cfa891116be38a60d1e82d820965249ea44e0d6348634a40ef6827f27bbb0" "90a6f96a4665a6a56e36dec873a15cbedf761c51ec08dd993d6604e32dd45940" "3d21eda97ce916fda054b0d2e1381e3fb3118cee79749e4b282b55fc461fb13e" "c335adbb7d7cb79bc34de77a16e12d28e6b927115b992bccc109fb752a365c72" default))
+ '(package-selected-packages
+   '(register-jump zoom wgrep-ag w3m vundo vlf vc-use-package undo-tree timu-spacegrey-theme tao-theme solarized-theme sml-mode sicp sexy-monochrome-theme rg quelpa-use-package qrencode pyim-basedict pyim phoenix-dark-mono-theme nova-theme nov nimbus-theme nano-theme multi-vterm monokai-theme meow material-theme magit lispy kuronami-theme i-ching howm evil dired-single deft darktooth-theme creamsody-theme counsel benchmark-init arduino-mode ample-theme ag afternoon-theme))
+ '(package-vc-selected-packages
+   '((register-jump :vc-backend Git :url "https://github.com/leoliu/register-jump.el"))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(diary ((t (:background "dark green" :foreground "#F0DFAF")))))
