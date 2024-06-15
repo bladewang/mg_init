@@ -74,6 +74,12 @@
   :bind
   ("C-M-s" . 'swiper-isearch))
 
+(use-package register-jump
+  :vc (:fetcher github :repo leoliu/register-jump.el)
+  :defer t
+  :init
+  (define-key ctl-x-r-map "j" 'register-jump))
+
 (use-package j-mode
   :pin melpa
   :defer t
