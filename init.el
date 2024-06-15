@@ -104,6 +104,12 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
+(use-package meow
+  :defer t
+  :bind
+  (:map meow-insert-state-keymap
+	("C-c" . 'meow-insert-exit)))
+
 (use-package undo-tree
   :ensure t
   :defer t
