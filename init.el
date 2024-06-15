@@ -114,7 +114,7 @@
   :defer t
   :init
   (defun my/map-meow-insert-exit ()
-    (define-key meow-insert-state-keymap ["C-c"] 'meow-insert-exit))
+    (define-key meow-insert-state-keymap (kbd "ESC") 'meow-insert-exit))
   (add-hook 'meow-global-mode-hook 'my/map-meow-insert-exit))
 
 (use-package undo-tree
