@@ -112,9 +112,10 @@
 
 (use-package meow
   :defer t
-  :bind
-  (:map meow-insert-state-keymap
-	("C-c" . 'meow-insert-exit)))
+  :init
+  (defun my/map-meow-insert-exit ()
+    (define-key meow-insert-state-keymap ["C-c"] 'meow-insert-exit))
+  (add-hook 'meow-global-mode-hook 'my/map-meow-insert-exit))
 
 (use-package undo-tree
   :ensure t
