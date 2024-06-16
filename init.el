@@ -110,12 +110,11 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-(use-package meow
+(use-package meow-keymap
   :defer t
-  :init
-  (defun my/map-meow-insert-exit ()
-    (define-key meow-insert-state-keymap (kbd "ESC") 'meow-insert-exit))
-  (add-hook 'meow-insert-mode-hook 'my/map-meow-insert-exit))
+  :bind*
+  (:map  meow-insert-state-keymap
+	 ("ESC" . 'meow-insert-exit)))
 
 (use-package undo-tree
   :ensure t
