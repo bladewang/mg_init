@@ -178,7 +178,9 @@
 (use-package calendar
   :defer t
   :config
-  (calendar-set-date-style 'iso))
+  (calendar-set-date-style 'iso)
+  :custom-face
+  (diary ((t (:background "dark green" :foreground "#F0DFAF")))))
 
 (defvar my/packages
   ;;; packages in elpa & melpa-stable
