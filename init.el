@@ -87,6 +87,13 @@
   ;; for j90x
   (setq j-console-cmd "jconsole"))
 
+(use-package gptel
+  :pin melpa
+  :defer t
+  :init
+  (when (file-exists-p "~/gptel.el")
+    (load "~/gptel.el")))
+
 (use-package magit
   :defer t
   :pin melpa)
