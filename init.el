@@ -240,7 +240,7 @@
     phoenix-dark-mono-theme ;Monochromatic version of the Phoenix theme
     solarized-theme       ;The Solarized color theme
     nova-theme            ;A dark, pastel color theme
-    kuronami-theme        ;A deep blue theme with cool autumnal colors
+    nimbus-theme          ;An awesome dark theme
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
     multi-vterm           ;Like multi-term.el but for vterm
