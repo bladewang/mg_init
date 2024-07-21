@@ -208,7 +208,6 @@
     darktooth-theme       ; the darkness... it watches
     ample-theme           ;Dark Theme for Emacs
     material-theme        ;Theme based on the colors of the Google Material Design
-    creamsody-theme       ;Straight from the soda fountain.
     sexy-monochrome-theme ;A sexy dark Emacs >= 24 theme for your sexy code
     tao-theme             ; package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
     ;use-package           ;A configuration macro for simplifying your .emacs
