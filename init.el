@@ -161,9 +161,18 @@
   :defer t
   :config
   (put 'dired-find-alternate-file 'disabled nil)
+  (setq dired-listing-switches "-alhtG")
   :bind (:map dired-mode-map
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
+
+(use-package ls-lisp
+  :init
+  ;; (delq 'links ls-lisp-verbosity)
+  ;; (delq 'uid ls-lisp-verbosity)
+  (setq ls-lisp-use-insert-directory-program nil
+	ls-lisp-dirs-first t
+	ls-lisp-verbosity nil))
 
 (use-package image
   :defer t
