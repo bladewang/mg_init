@@ -174,6 +174,12 @@
 	ls-lisp-dirs-first t
 	ls-lisp-verbosity nil))
 
+(use-package doc-view
+  ;; try to `M-x doc-view-clear-cache`, if nothing showed better
+  :defer t
+  :config
+  (setq doc-view-resolution 260))
+
 (use-package image
   :defer t
   :init
