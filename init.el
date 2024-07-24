@@ -161,7 +161,7 @@
   :defer t
   :config
   (put 'dired-find-alternate-file 'disabled nil)
-  (setq dired-listing-switches "-alhtG")
+  (setq dired-listing-switches "-alht")
   :bind (:map dired-mode-map
 	      ("RET" . 'dired-find-alternate-file)
 	      ("^" . (lambda () (interactive) (find-alternate-file "..")))))
