@@ -117,6 +117,10 @@
   :init
   (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
+(use-package easysession
+  :defer t
+  :pin melpa)
+
 (use-package meow-keymap
   :defer t
   :bind*
