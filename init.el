@@ -265,6 +265,7 @@
     meow                  ;modal editng with multi cursors and leader key support
     rg                    ;A search tool based on ripgrep
     i-ching               ;The Book of Changes
+    pdf-tools             ;Support library for PDF documents
     ;picpocket             ;Image browser, with particular support for tag edit & filter
  ))
 
