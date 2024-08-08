@@ -259,6 +259,7 @@
     solarized-theme       ;The Solarized color theme
     nova-theme            ;A dark, pastel color theme
     nimbus-theme          ;An awesome dark theme
+    color-theme-sanityinc-tomorrow ;A version of Chris Kempson's "tomorrow" themes
     j-mode                ;Major mode for editing J programs
     vterm                 ;Fully-featured terminal emulator
     multi-vterm           ;Like multi-term.el but for vterm
