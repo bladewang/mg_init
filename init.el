@@ -144,7 +144,7 @@
   :bind
   ("M-o" . 'ace-window)
   :custom-face
-  (aw-leading-char-face ((t (:foreground "red" :height 2.0)))))
+  (aw-leading-char-face ((t (:background "white" :foreground "black" :height 2.0)))))
 
 (use-package elpy
   ;; to activate, M-: (elpy-enable)
