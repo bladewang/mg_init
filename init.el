@@ -267,6 +267,7 @@
     rg                    ;A search tool based on ripgrep
     i-ching               ;The Book of Changes
     pdf-tools             ;Support library for PDF documents
+    markdown-ts-mode      ;Major mode for Markdown using Treesitter
     ;picpocket             ;Image browser, with particular support for tag edit & filter
  ))
 
