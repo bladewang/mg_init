@@ -221,6 +221,7 @@
     pyim-basedict         ;The default pinyin dict of pyim
     dired-single          ;Reuse the current dired buffer to visit a directory
     evil                  ;Extensible Vi layer for Emacs.
+    counsel-tramp         ;Tramp ivy interface for ssh, docker, vagrant.
     benchmark-init        ;Benchmarks Emacs require and load calls
     afternoon-theme       ;Dark color theme with a deep blue background
     monokai-theme         ;A fruity color theme for Emacs.
