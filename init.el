@@ -113,12 +113,12 @@
 
 (use-package howm
   :defer t
-  :pin mepla
+  :pin melpa
   :init
   ;; Use the_silvers_searcher as grep
   (setq howm-view-use-grep t)
-  (setq howm-view-grep-command "rg")
-  (setq howm-view-grep-option "-nH --no-heading --color never")
+  (setq howm-view-grep-command "ag")
+  (setq howm-view-grep-option "-H --numbers --no-color --noheading")
   (setq howm-view-grep-extended-option nil)
   (setq howm-view-grep-fixed-option "-F")
   (setq howm-view-grep-expr-option nil)
