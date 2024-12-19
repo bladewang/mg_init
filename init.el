@@ -111,6 +111,23 @@
   (:map vterm-mode-map
 	("C-q" . 'vterm-send-next-key)))
 
+(use-package howm
+  :defer t
+  :pin mepla
+  :init
+  ;; Use the_silvers_searcher as grep
+  (setq howm-view-use-grep t)
+  (setq howm-view-grep-command "rg")
+  (setq howm-view-grep-option "-nH --no-heading --color never")
+  (setq howm-view-grep-extended-option nil)
+  (setq howm-view-grep-fixed-option "-F")
+  (setq howm-view-grep-expr-option nil)
+  (setq howm-view-grep-file-stdin-option nil)
+  :custom-face
+  (howm-mode-title-face ((t (:foreground "LightGreen"))))
+  (howm-reminder-normal-face ((t (:foreground "LightGreen"))))
+  )
+
 (use-package nov
   :defer t
   :pin melpa
