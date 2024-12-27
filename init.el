@@ -112,6 +112,7 @@
 	("C-q" . 'vterm-send-next-key)))
 
 (use-package howm
+  :ensure t
   :defer t
   :pin melpa
   :init
