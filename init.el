@@ -288,6 +288,7 @@
     nimbus-theme          ;An awesome dark theme
     color-theme-sanityinc-tomorrow ;A version of Chris Kempson's "tomorrow" themes
     j-mode                ;Major mode for editing J programs
+    bqn-mode              ;Emacs mode for BQN
     vterm                 ;Fully-featured terminal emulator
     multi-vterm           ;Like multi-term.el but for vterm
     meow                  ;modal editng with multi cursors and leader key support
