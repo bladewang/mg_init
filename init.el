@@ -129,6 +129,14 @@
   (howm-reminder-normal-face ((t (:foreground "LightGreen"))))
   )
 
+(use-package bqn-mode
+  :ensure t
+  :defert t
+  :pin melpa
+  :init
+  :custom-face
+  (bqn-default ((t (:family "Iosevka")))))
+
 (use-package nov
   :defer t
   :pin melpa
