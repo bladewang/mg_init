@@ -131,7 +131,7 @@
 
 (use-package bqn-mode
   :ensure t
-  :defert t
+  :defer t
   :pin melpa
   :init
   :custom-face
