@@ -62,6 +62,19 @@
   (package-vc-install "https://github.com/slotThe/vc-use-package"))
 (require 'vc-use-package)
 
+(use-package exec-path-from-shell
+  :ensure t  ;; 确保该包被安装
+  :pin melpa
+  :config
+  (exec-path-from-shell-initialize)
+
+  ;; 如果你需要从 shell 复制除 PATH 和 MANPATH 之外的其他环境变量，
+  ;; 可以在这里添加：
+  ;; (exec-path-from-shell-copy-envs '("PYTHONPATH" "JAVA_HOME" "GOPATH"))
+  ;; 可以选择性地禁用某些变量的复制，例如，如果你希望 Emacs 内部的某些变量不受 shell 影响：
+  ;; (setq exec-path-from-shell-variables-to-exclude '("TERM" "LS_COLORS"))
+  )
+
 (use-package counsel
   :ensure t
   :config
