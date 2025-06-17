@@ -21,6 +21,10 @@
               ediff-forward-word-function  'forward-char
               diff-switches "-u")
 
+;; when height of screen size > 160 rows, try to split the screen vertically
+;; for a large 16:9 monitor
+(setq split-height-threshold 160)
+
 ;; set ediff control panel not to split apart from main gui frame
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
