@@ -202,6 +202,10 @@
   (:map view-mode-map
    ("e" . 'View-scroll-line-forward)))
 
+;(use-package dired-single
+;  :vc (:fetcher github :repo emacsattic/dired-single)
+;  :defer t)
+
 ;; learned from xahlee ;; or just (require 'dired-single) than M-x dired-single-magic-buffer
 ;; press "o" to open file in another window
 (use-package dired
@@ -262,7 +266,7 @@
     zoom                  ;Fixed and automatic balanced window layout
     pyim                  ;A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime.
     pyim-basedict         ;The default pinyin dict of pyim
-    dired-single          ;Reuse the current dired buffer to visit a directory
+    ;dired-single          ;Reuse the current dired buffer to visit a directory (not in elpa already)
     evil                  ;Extensible Vi layer for Emacs.
     counsel-tramp         ;Tramp ivy interface for ssh, docker, vagrant.
     benchmark-init        ;Benchmarks Emacs require and load calls
@@ -333,3 +337,71 @@
 
 (setq gc-cons-threshold (* 2 1000 1000))
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   '("6bdc4e5f585bb4a500ea38f563ecf126570b9ab3be0598bdf607034bb07a8875"
+     "b11edd2e0f97a0a7d5e66a9b82091b44431401ac394478beb44389cf54e6db28"
+     "6fc9e40b4375d9d8d0d9521505849ab4d04220ed470db0b78b700230da0a86c1"
+     "04aa1c3ccaee1cc2b93b246c6fbcd597f7e6832a97aaeac7e5891e6863236f9f"
+     "76ddb2e196c6ba8f380c23d169cf2c8f561fd2013ad54b987c516d3cabc00216"
+     "0281422e7ac95350d1c8593a0107860ed7045f30e51c59526fa2facb693f5262"
+     "d89e15a34261019eec9072575d8a924185c27d3da64899905f8548cbd9491a36"
+     "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5"
+     "0489e00d609dd8d3262d03e2c72b1da0a040c25806c230c6602005be1db01e46"
+     "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1"
+     "833ddce3314a4e28411edf3c6efde468f6f2616fc31e17a62587d6a9255f4633"
+     "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c"
+     "3e200d49451ec4b8baa068c989e7fba2a97646091fd555eca0ee5a1386d56077"
+     "fdb9f6f42170d8bb9255ac3e0cdf370f2e65ba55b515c7456dac9379abb40e15"
+     "c5e7a36784b1955b28a89a39fef7c65ddc455b8e7fd70c6f5635cb21e4615670"
+     "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307"
+     "02fefdfc9a0c7256a10c8794a4985c9c70c5fbf674873b66807e8143e02c81a7"
+     "763bf89898a06b03f7b65fbc29857a1c292e4350246093702fdbd6c4e46e2cf0"
+     "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773"
+     "d92c1c36a5181cf629749bf6feee1886cf6bce248ab075c9d1b1f6096fea9539"
+     "07885feecd236e4ba3837e7ff15753d47694e1f9a8049400c114b3298285534e"
+     "77f1e155387d355fbbb3b382a28da41cc709b2a1cc71e7ede03ee5c1859468d2"
+     "de8f2d8b64627535871495d6fe65b7d0070c4a1eb51550ce258cd240ff9394b0"
+     "e7820b899036ae7e966dcaaec29fd6b87aef253748b7de09e74fdc54407a7a02"
+     "fffd03886983720ef3e4dd2df3cb65b51fa9ab5ec7fb5d6b5da838e64da6cc7d"
+     "84f3df540486422ffd00faeae12dee08ac0da8ca317b80dd6167e0877b20edc7"
+     "97cc75eac251451d5e20a9d5ac305231edcfbb7f76f4aa49baebeb04e53c4e53"
+     "f5507a4256837202b3cf81c8e3b292c5a5ef73964bac2a43bf6b6c0b3d788686"
+     "57a29645c35ae5ce1660d5987d3da5869b048477a7801ce7ab57bfb25ce12d3e"
+     "efcecf09905ff85a7c80025551c657299a4d18c5fcfedd3b2f2b6287e4edd659"
+     "00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c"
+     "4c56af497ddf0e30f65a7232a8ee21b3d62a8c332c6b268c81e9ea99b11da0d3"
+     "90a6f96a4665a6a56e36dec873a15cbedf761c51ec08dd993d6604e32dd45940"
+     "f149d9986497e8877e0bd1981d1bef8c8a6d35be7d82cba193ad7e46f0989f6a"
+     "a9e17ed60edf45b8aed389713f0826cde71c24aa464e1b1d36f71a0504699520"
+     "c335adbb7d7cb79bc34de77a16e12d28e6b927115b992bccc109fb752a365c72"
+     "551629d1e63bb66423dd80b3ec2d1a67611d1fa570e7238201e65b25a3b3834f"
+     "1a6d120936f9df3f44953124dbf9e56b399e021702ca7d1844e6c5e1658b692b"
+     default))
+ '(large-file-warning-threshold nil)
+ '(package-selected-packages
+   '(0blayout 0x0 afternoon-theme ag ample-theme arduino-mode
+	      benchmark-init blimp bqn-mode
+	      color-theme-sanityinc-tomorrow counsel-tramp
+	      darktooth-theme deft dired-single easysession evil
+	      exec-path-from-shell f gptel howm i-ching j-mode
+	      key-assist kv lispy magit markdown-mode markdown-ts-mode
+	      material-theme meow monokai-theme multi-vterm
+	      nimbus-theme nov nova-theme org-roam pdf-tools
+	      phoenix-dark-mono-theme pyim-basedict qrencode
+	      quelpa-use-package register-jump rg
+	      sexy-monochrome-theme sicp sml-mode solarized-theme
+	      tao-theme undo-tree vc-use-package vlf vundo w3m
+	      wgrep-ag zoom)))
+(put 'scroll-left 'disabled nil)
+(put 'magit-diff-edit-hunk-commit 'disabled nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(bqn-default ((t (:family "Iosevka"))) t))
