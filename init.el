@@ -333,7 +333,7 @@
 (server-start)
 
 
-(load-theme 'material 1)
+(load-theme 'solarized-zenburn 1)
 
 (setq gc-cons-threshold (* 2 1000 1000))
 
