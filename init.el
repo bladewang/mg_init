@@ -248,10 +248,7 @@
 	     (goto-line (+ 1 margin-height))
 	     (insert (make-string margin-width ?\s)))
       (set-buffer-modified-p nil)))
-  (add-hook 'image-mode-hook 'my/center-image)
-  (advice-add 'image-transform-reset-to-initial :after 'my/center-image)
-  (advice-add 'image-transform-fit-to-window :after 'my/center-image)
-  (advice-add 'image-transform-fit-both :after 'my/center-image))
+  (add-hook 'image-mode-hook 'my/center-image))
 
 (use-package calendar
   :defer t
