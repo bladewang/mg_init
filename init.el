@@ -126,6 +126,7 @@
   ;; C-q bind to quoted-insert by defult
   ;;     ,use :map to limit the map just bind in vterm
   (:map vterm-mode-map
+	("C-c C-t" . 'vterm-copy-mode)
 	("C-q" . 'vterm-send-next-key)))
 
 (use-package howm
