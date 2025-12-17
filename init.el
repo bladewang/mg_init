@@ -89,7 +89,8 @@
 	enable-recursive-minibuffers   t
 	minibuffer-depth-indicate-mode t)
   :bind
-  ("C-M-s" . 'swiper-isearch))
+  ("C-M-s" . 'swiper-isearch)
+  ("C-x C-M-f" . 'counsel-fzf))
 
 (use-package register-jump
   :vc (:fetcher github :repo leoliu/register-jump.el)
