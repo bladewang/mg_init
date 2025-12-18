@@ -235,9 +235,10 @@
 
 (use-package image
   :defer t
-  :bind
-  ("." . 'image-next-file)
-  ("," . 'image-previous-file)
+  :bind*
+  (:map image-mode-map
+        ("." . 'image-next-file)
+        ("," . 'image-previous-file))
   :init
   (defun my/center-image ()
     "hook function to display image on the center of window"
