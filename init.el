@@ -235,10 +235,6 @@
 
 (use-package image
   :defer t
-  :bind*
-  (:map image-mode-map
-        ("." . 'image-next-file)
-        ("," . 'image-previous-file))
   :init
   (defun my/center-image ()
     "hook function to display image on the center of window"
@@ -253,7 +249,9 @@
 	     (insert (make-string margin-height ?\n))
 	     (goto-line (+ 1 margin-height))
 	     (insert (make-string margin-width ?\s)))
-      (set-buffer-modified-p nil)))
+      (set-buffer-modified-p nil))
+    (define-key image-mode-map (kbd ".") 'image-next-file)
+    (define-key image-mode-map (kbd ",") 'image-previous-file))
   (add-hook 'image-mode-hook 'my/center-image))
 
 (use-package calendar
