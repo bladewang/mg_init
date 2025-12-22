@@ -235,22 +235,23 @@
 
 (use-package image
   :defer t
-  :hook (image-mode . (lambda ()
-    "hook function to display image on the center of window"
-    (let* ((window-width  (window-total-width))
-           (window-height (window-total-height))
-	   (image-width   (car (image-size (image-get-display-property))))
-           (image-height  (cdr (image-size (image-get-display-property))))
-           (margin-width  (truncate (/ (- window-width  image-width)  2)))
-           (margin-height (truncate (/ (- window-height image-height) 2)))
-	   (inhibit-read-only t))
-      (progn (goto-line 1)
-	     (insert (make-string margin-height ?\n))
-	     (goto-line (+ 1 margin-height))
-	     (insert (make-string margin-width ?\s)))
-      (set-buffer-modified-p nil))
-    (define-key image-mode-map (kbd ".") 'image-next-file)
-    (define-key image-mode-map (kbd ",") 'image-previous-file))))
+  :hook
+  (image-mode . (lambda ()
+                  "hook function to display image on the center of window"
+                  (let* ((window-width  (window-total-width))
+                         (window-height (window-total-height))
+	                 (image-width   (car (image-size (image-get-display-property))))
+                         (image-height  (cdr (image-size (image-get-display-property))))
+                         (margin-width  (truncate (/ (- window-width  image-width)  2)))
+                         (margin-height (truncate (/ (- window-height image-height) 2)))
+	                 (inhibit-read-only t))
+                    (progn (goto-line 1)
+	                   (insert (make-string margin-height ?\n))
+	                   (goto-line (+ 1 margin-height))
+	                   (insert (make-string margin-width ?\s)))
+                    (set-buffer-modified-p nil))
+                  (define-key image-mode-map (kbd ".") 'image-next-file)
+                  (define-key image-mode-map (kbd ",") 'image-previous-file))))
 
 (use-package calendar
   :defer t
