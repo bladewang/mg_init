@@ -15,6 +15,13 @@
 (defvar default-font "Iosevka Term-16.0:weight=light")
 (add-to-list 'default-frame-alist `(font . ,default-font))
 
+;; CJK Unified Ideographs 基本区
+(set-fontset-font t
+                  '(#x4e00 . #x9fff)
+                  ;(font-spec :family "KingHwaOldSong")
+                  (font-spec :family "Source Han Serif HC VF")
+		  )
+
 (setq-default auto-save-default  nil
               make-backup-files  nil
               linum-format  "%4d "
