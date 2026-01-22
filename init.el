@@ -224,6 +224,17 @@
 
 (use-package view
   :defer t
+  :config
+  ;; 定义 advice 逻辑
+  (defun my-ad-sync-view-with-read-only (orig-fun &rest args)
+    "使 read-only-mode 与 view-mode 保持同步。"
+    (apply orig-fun args)
+    (if buffer-read-only
+        (unless view-mode (view-mode 1))
+      (when view-mode (view-mode -1))))
+  ;; 注入 advice
+  (advice-add 'read-only-mode :around #'my-ad-sync-view-with-read-only)
+
   :bind
   (:map view-mode-map
    ("e" . 'View-scroll-line-forward)))
