@@ -237,7 +237,7 @@
 
   :bind
   (:map view-mode-map
-   ("e" . 'View-scroll-line-forward)))
+    ("e" . 'View-scroll-line-forward)))
 
 ;(use-package dired-single
 ;  :vc (:fetcher github :repo emacsattic/dired-single)
