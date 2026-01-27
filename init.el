@@ -355,7 +355,8 @@
     i-ching               ;The Book of Changes
     pdf-tools             ;Support library for PDF documents
     markdown-ts-mode      ;Major mode for Markdown using Treesitter
-    ;picpocket             ;Image browser, with particular support for tag edit & filter
+    aria2                 ;aria2c commandline tool from Emacs.
+    ;picpocket            ;Image browser, with particular support for tag edit & filter
  ))
 
 (defun my/packages-not-installed (pkgs)
