@@ -333,6 +333,7 @@
     lispy                 ;vi-like Paredit
     vlf                   ;View Large Files
     qrencode              ;QRCode encoder
+    gnu-elpa-keyring-update         ;Emacs's GPG keyring for GNU ELPA
     ))
 
 (defvar my/packages-melpa
