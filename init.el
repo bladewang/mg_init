@@ -223,7 +223,6 @@
   (setq python-shell-interpreter "python3"))
 
 (use-package view
-  :defer t
   :config
   ;; 定义 advice 逻辑
   (defun my-ad-sync-view-with-read-only (orig-fun &rest args)
