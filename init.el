@@ -356,6 +356,7 @@
     pdf-tools             ;Support library for PDF documents
     markdown-ts-mode      ;Major mode for Markdown using Treesitter
     aria2                 ;aria2c commandline tool from Emacs.
+    zoxide                ;Find file by zoxide
     ;picpocket            ;Image browser, with particular support for tag edit & filter
  ))
 
