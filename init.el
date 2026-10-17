@@ -134,7 +134,26 @@
   :defer t
   :init
   (when (file-exists-p "~/gptel.el")
-    (load "~/gptel.el")))
+    (load "~/gptel.el"))
+  :config
+  (setopt gptel-highlight-methods '(fringe))
+  :bind
+  (("C-c g s" . gptel-send)
+   ("C-c g r" . gptel-rewrite)))
+
+(use-package gptel-agent
+  :pin melpa
+  :defer t
+  )
+
+(use-package gptel-inline
+  :pin melpa
+  :defer t
+  :bind
+  ("C-c g i" . gptel-inline)
+  (:map gptel-inline--response-overlay-mode-map
+        ("C-M-S-v" . gptel-inline--response-overlay-pageup))
+  )
 
 (use-package magit
   :defer t
