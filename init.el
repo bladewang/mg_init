@@ -441,6 +441,7 @@
      "551629d1e63bb66423dd80b3ec2d1a67611d1fa570e7238201e65b25a3b3834f"
      "1a6d120936f9df3f44953124dbf9e56b399e021702ca7d1844e6c5e1658b692b"
      default))
+ '(display-time-24hr-format t)
  '(large-file-warning-threshold nil)
  '(package-selected-packages
    '(0blayout 0x0 afternoon-theme ag ample-theme arduino-mode
