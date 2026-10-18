@@ -139,7 +139,8 @@
   (setopt gptel-highlight-methods '(fringe))
   :bind
   (("C-c g s" . gptel-send)
-   ("C-c g r" . gptel-rewrite)))
+   ("C-c g r" . gptel-rewrite)
+   ("C-c g h" . gptel-highlight-mode)))
 
 (use-package gptel-agent
   :pin melpa
@@ -402,7 +403,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("6bdc4e5f585bb4a500ea38f563ecf126570b9ab3be0598bdf607034bb07a8875"
+   '("36d4b9573ed57b3c53261cb517eef2353058b7cf95b957f691f5ad066933ae84"
+     "285d1bf306091644fb49993341e0ad8bafe57130d9981b680c1dbd974475c5c7"
+     "7fea145741b3ca719ae45e6533ad1f49b2a43bf199d9afaee5b6135fd9e6f9b8"
+     "2b0fcc7cc9be4c09ec5c75405260a85e41691abb1ee28d29fcd5521e4fca575b"
+     "6bdc4e5f585bb4a500ea38f563ecf126570b9ab3be0598bdf607034bb07a8875"
      "b11edd2e0f97a0a7d5e66a9b82091b44431401ac394478beb44389cf54e6db28"
      "6fc9e40b4375d9d8d0d9521505849ab4d04220ed470db0b78b700230da0a86c1"
      "04aa1c3ccaee1cc2b93b246c6fbcd597f7e6832a97aaeac7e5891e6863236f9f"
@@ -444,19 +449,26 @@
  '(display-time-24hr-format t)
  '(large-file-warning-threshold nil)
  '(package-selected-packages
-   '(0blayout 0x0 afternoon-theme ag ample-theme arduino-mode
+   '(0blayout 0x0 afternoon-theme ag ample-theme arduino-mode aria2
 	      benchmark-init blimp bqn-mode
 	      color-theme-sanityinc-tomorrow counsel-tramp
 	      darktooth-theme deft dired-single easysession evil
-	      exec-path-from-shell f gptel howm i-ching j-mode
-	      key-assist kv lispy magit markdown-mode markdown-ts-mode
-	      material-theme meow monokai-theme multi-vterm
-	      nimbus-theme nov nova-theme org-roam pdf-tools
-	      phoenix-dark-mono-theme pyim-basedict qrencode
-	      quelpa-use-package register-jump rg
+	      exec-path-from-shell f fzf gnu-elpa-keyring-update gptel
+	      gptel-agent gptel-inline haskell-mode haskell-ts-mode
+	      howm i-ching j-mode key-assist kv lispy magit
+	      markdown-mode markdown-ts-mode material-theme meow
+	      monokai-theme multi-vterm nimbus-theme nov nova-theme
+	      org-roam pdf-tools phoenix-dark-mono-theme pyim-basedict
+	      qrencode quelpa-use-package register-jump rg
 	      sexy-monochrome-theme sicp sml-mode solarized-theme
-	      tao-theme undo-tree vc-use-package vlf vundo w3m
-	      wgrep-ag zoom)))
+	      tao-theme tsc typescript-mode undo-tree vc-use-package
+	      vlf vundo w3m wgrep-ag zoom zoxide)))
 (put 'scroll-left 'disabled nil)
 (put 'magit-diff-edit-hunk-commit 'disabled nil)
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
