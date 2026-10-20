@@ -133,8 +133,9 @@
   :pin melpa
   :defer t
   :init
-  (when (file-exists-p "~/gptel/gptel.el")
-    (load "~/gptel/gptel.el"))
+  (setq my-gptel-conf "~/gptel/gptel.el")
+  (when (file-exists-p my-gptel-conf)
+    (load my-gptel-conf))
   :hook (gptel-mode . gptel-highlight-mode)
   :config
   (setopt gptel-highlight-methods '(fringe))
