@@ -149,8 +149,11 @@
   :pin melpa
   :defer t
   :config
-  (setq gptel-agent-dirs
-	(append gptel-agent-dirs '("~/gptel/agents")))
+  (setq my-gptel-agents-dir "~/gptel/agents")
+  (when (file-exists-p my-gptel-agents-dir)
+    (unless (member my-gptel-agents-dir gptel-agent-dirs)
+      (setq gptel-agent-dirs
+	    (append gptel-agent-dirs `(,my-gptel-agents-dir)))))
   (gptel-agent-update)
   :bind
   (("C-c g  a" . gptel-agent)))
