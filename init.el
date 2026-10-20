@@ -153,8 +153,8 @@
   :bind
   ("C-c g i" . gptel-inline)
   (:map gptel-inline--response-overlay-mode-map
-        ("C-M-S-v" . gptel-inline--response-overlay-pageup))
-  )
+        ;("C-M-S-v" . gptel-inline--response-overlay-pageup)
+        ("C-M-g" . gptel-inline--response-overlay-pageup)))
 
 (use-package magit
   :defer t
