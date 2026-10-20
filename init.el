@@ -133,19 +133,26 @@
   :pin melpa
   :defer t
   :init
-  (when (file-exists-p "~/gptel.el")
-    (load "~/gptel.el"))
+  (when (file-exists-p "~/gptel/gptel.el")
+    (load "~/gptel/gptel.el"))
+  :hook (gptel-mode . gptel-highlight-mode)
   :config
   (setopt gptel-highlight-methods '(fringe))
   :bind
   (("C-c g s" . gptel-send)
    ("C-c g r" . gptel-rewrite)
+   ("C-c g g" . gptel)
    ("C-c g h" . gptel-highlight-mode)))
 
 (use-package gptel-agent
   :pin melpa
   :defer t
-  )
+  :config
+  (setq gptel-agent-dirs
+	(append gptel-agent-dirs '("~/gptel/agents")))
+  (gptel-agent-update)
+  :bind
+  (("C-c g  a" . gptel-agent)))
 
 (use-package gptel-inline
   :pin melpa
