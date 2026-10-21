@@ -167,6 +167,13 @@
         ;("C-M-S-v" . gptel-inline--response-overlay-pageup)
         ("C-M-g" . gptel-inline--response-overlay-pageup)))
 
+(use-package i-ching
+  :ensure t
+  :defer t
+  :custom
+  (i-ching-randomness-source 'random)
+  (i-ching-divination-method '3-coins))
+
 (use-package magit
   :defer t
   :pin melpa)
@@ -383,7 +390,6 @@
     multi-vterm           ;Like multi-term.el but for vterm
     meow                  ;modal editng with multi cursors and leader key support
     rg                    ;A search tool based on ripgrep
-    i-ching               ;The Book of Changes
     pdf-tools             ;Support library for PDF documents
     markdown-ts-mode      ;Major mode for Markdown using Treesitter
     aria2                 ;aria2c commandline tool from Emacs.
