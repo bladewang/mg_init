@@ -2,6 +2,7 @@
 (setq gc-cons-threshold (* 50 1000 1000))
 
 (setq inhibit-startup-screen t)
+(setq confirm-kill-emacs 'yes-or-no-p)
 (menu-bar-mode -1) ;; to visit menu options,  M-x tmm-menubar
 
 (tool-bar-mode -1)
