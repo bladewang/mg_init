@@ -150,6 +150,8 @@
   :pin melpa
   :defer t
   :config
+  ;; websearch use eww default search setting
+  ;; (setq eww-search-prefix "https://www.bing.com/search?q=")
   (setq my-gptel-agents-dir "~/gptel/agents")
   (when (file-exists-p my-gptel-agents-dir)
     (unless (member my-gptel-agents-dir gptel-agent-dirs)
