@@ -143,6 +143,7 @@
   :bind
   (("C-c g s" . gptel-send)
    ("C-c g r" . gptel-rewrite)
+   ("C-c g k" . gptel-abort)
    ("C-c g g" . gptel)
    ("C-c g h" . gptel-highlight-mode)))
 
