@@ -185,23 +185,22 @@
 (use-package ghostel
   :defer t
   :config
+  (let* ((font-family "Sarasa Term Slab HC")
+         (term-font (font-spec :family font-family))
+         ;; 1. 基于目标字体创建独立的 fontset
+         (ghostel-fontset (create-fontset-from-fontset-spec
+                           (font-xlfd-name (font-spec :family font-family
+                                                      :registry "fontset-ghostel")))))
 
-  ;; 1. 创建名为 "fontset-ghostel" 的独立字体集
-  (let ((ghostel-fontset (create-fontset-from-fontset-spec
-                          (font-xlfd-name (font-spec :family "Sarasa Term SC Nerd"
-                                                     :registry "fontset-ghostel"))))
-        (term-font (font-spec :family "Sarasa Term SC Nerd")))
+    ;; 2. 批量将目标字符集绑定到 term-font
+    (dolist (charset '(ascii han cjk-misc symbol))
+      (set-fontset-font ghostel-fontset charset term-font))
 
-    ;; 2. 强制覆盖该字体集下的英文、中文、CJK符号和Unicode图标，防止回退到全局设置
-    (set-fontset-font ghostel-fontset 'ascii term-font)
-    (set-fontset-font ghostel-fontset 'han term-font)
-    (set-fontset-font ghostel-fontset 'cjk-misc term-font)
-    (set-fontset-font ghostel-fontset 'symbol term-font)
-
-    ;; 3. 将该独立 fontset 绑定到 ghostel-default
+    ;; 3. 应用到 ghostel-default
     (set-face-attribute 'ghostel-default nil
-                        :family "Sarasa Term SC Nerd"
+                        :family font-family
                         :fontset ghostel-fontset
+                        ;; :height 140
 			)))
 
 (use-package vterm
@@ -496,22 +495,19 @@
 	      benchmark-init blimp bqn-mode
 	      color-theme-sanityinc-tomorrow counsel-tramp
 	      darktooth-theme deft dired-single easysession evil
-	      exec-path-from-shell f fzf gnu-elpa-keyring-update gptel
-	      gptel-agent gptel-inline haskell-mode haskell-ts-mode
-	      howm i-ching j-mode key-assist kv lispy magit
-	      markdown-mode markdown-ts-mode material-theme meow
-	      monokai-theme multi-vterm nimbus-theme nov nova-theme
-	      org-roam pdf-tools phoenix-dark-mono-theme pyim-basedict
-	      qrencode quelpa-use-package register-jump rg
+	      exec-path-from-shell f fzf ghostel
+	      gnu-elpa-keyring-update gptel gptel-agent gptel-inline
+	      haskell-mode haskell-ts-mode howm i-ching j-mode
+	      key-assist kv lispy magit markdown-mode markdown-ts-mode
+	      material-theme meow monokai-theme multi-vterm
+	      nimbus-theme nov nova-theme org-roam pdf-tools
+	      phoenix-dark-mono-theme pyim-basedict qrencode
+	      quelpa-use-package ragmacs register-jump rg
 	      sexy-monochrome-theme sicp sml-mode solarized-theme
 	      tao-theme tsc typescript-mode undo-tree vc-use-package
-	      vlf vundo w3m wgrep-ag zoom zoxide)))
+	      vlf vundo w3m websocket wgrep-ag zoom zoxide))
+ '(package-vc-selected-packages
+   '((ragmacs :vc-backend Git :url
+	      "https://github.com/positron-solutions/ragmacs"))))
 (put 'scroll-left 'disabled nil)
 (put 'magit-diff-edit-hunk-commit 'disabled nil)
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
