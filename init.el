@@ -185,8 +185,7 @@
 (use-package ghostel
   :defer t
   :config
-  ;; 禁止为了对齐制表符，自动缩小中文字体
-  (setq-default ghostel-glyph-scale-floor 1.0)
+
   ;; 1. 创建名为 "fontset-ghostel" 的独立字体集
   (let ((ghostel-fontset (create-fontset-from-fontset-spec
                           (font-xlfd-name (font-spec :family "Sarasa Term SC Nerd"
