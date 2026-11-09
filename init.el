@@ -182,6 +182,28 @@
   :defer t
   :pin melpa)
 
+(use-package ghostel
+  :defer t
+  :config
+  (setq-default ghostel-glyph-scale-floor 1.0)
+  ;; 1. 创建名为 "fontset-ghostel" 的独立字体集
+  (let ((ghostel-fontset (create-fontset-from-fontset-spec
+                          (font-xlfd-name (font-spec :family "Sarasa Term SC Nerd"
+                                                     :registry "fontset-ghostel"))))
+        (term-font (font-spec :family "Sarasa Term SC Nerd")))
+
+    ;; 2. 强制覆盖该字体集下的英文、中文、CJK符号和Unicode图标，防止回退到全局设置
+    (set-fontset-font ghostel-fontset 'ascii term-font)
+    (set-fontset-font ghostel-fontset 'han term-font)
+    (set-fontset-font ghostel-fontset 'cjk-misc term-font)
+    (set-fontset-font ghostel-fontset 'symbol term-font)
+
+    ;; 3. 将该独立 fontset 绑定到 ghostel-default
+    (set-face-attribute 'ghostel-default nil
+                        :family "Sarasa Term SC Nerd"
+                        :fontset ghostel-fontset
+			)))
+
 (use-package vterm
   :defer t
   :pin melpa
